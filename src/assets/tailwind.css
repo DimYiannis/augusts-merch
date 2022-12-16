@@ -13,7 +13,7 @@ html {
 
 .navbar {
     @apply flex items-center justify-between w-full fixed 
-    top-0 z-10 text-white py-2 h-[3.5rem] p-[1.2rem];
+    top-0 z-10 text-white py-2 h-[3.5rem] p-[1.2rem] ;
    
 }
 
@@ -26,7 +26,8 @@ html {
 .social {
     @apply text-2xl font-semibold text-[#eceef3] mx-[0.4rem]
     px-[0.3rem] py-[0.1rem] rounded-[0.5rem] bg-transparent
-    hover:bg-[#f4f4f7] hover:bg-opacity-10 transition-all duration-300;
+    hover:bg-[#f4f4f7] hover:bg-opacity-10 transition-all duration-300
+    ;
 }
 
 .section {

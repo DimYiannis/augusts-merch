@@ -60,8 +60,8 @@
 
     
         <div class=" bg-black absolute h-full top-[0%] left-[65%] text-center text-5xl  text-[#a7b4ae]">  
-            <h1 class="p-4 absolute top-[30%]">Cotton Made Shirts</h1>
-            <h2 class="p-4">Order Online For <span class="underline cursor-pointer">
+            <h1 class="p-4 absolute top-[40%] left-[5%]">Cotton Made Shirts</h1>
+            <h2 class="p-4 leading-tight">Order Online For <span class="underline cursor-pointer">
                 Touchless</span ></h2>
             <span class="underline cursor-pointer ">
                 Delivery </span>
