@@ -1,7 +1,7 @@
 <template>
 <header class="navbar  bg-[#070707]"  >
-<img src="./assets/0022347955_100 (1).svg" class="h-14" >
-<div>
+<img src="./assets/0022347955_100 (1).svg" class="h-14 w-28 sm:w-36 md:w-44 lg:w-60  " >
+<div class="grid grid-cols-3 gap-3">
     <a href="#sweats" class="navlink">Sweats</a>
     <a href="#shirts" class="navlink">Shirts</a>
     <a href="#pants" class="navlink">Bottoms</a>
@@ -20,7 +20,7 @@
         <img src="./assets/nonchal2.jpg">
 
         <div class="details">
-            <h1 class="p-2">The Finest At August's Place </h1>
+            <h1 class="p-2 ">The Finest At August's Place </h1>
             <h2 class="p-2">Nonchalant Apparel</h2>
             <h3 class="p-2">Urban Style</h3>
             <h4 class="p-2">Street Clothes</h4>
@@ -42,7 +42,7 @@
         <img src="./assets/gen6.jpg" alt="sweats Image" class="section_image">
 
         <div class="absolute top-[20%] left-[5%] 
-        text-center text-5xl text-[#d89585]">
+        text-center text-[#d89585]">
             <h1 class="p-2 ">Sweats</h1>
         </div>
     
@@ -59,7 +59,7 @@
         <img src="./assets/gen3.jpg" alt="shirts Image" class=" w-screen h-full ">
 
     
-        <div class=" bg-black absolute h-full top-[0%] left-[65%] text-center text-5xl  text-[#a7b4ae]">  
+        <div class=" bg-black absolute h-full top-[0%] left-[65%] text-center text-[#a7b4ae]">  
             <h1 class="p-4 absolute top-[40%] left-[5%]">Cotton Made Shirts</h1>
             <h2 class="p-4 leading-tight">Order Online For <span class="underline cursor-pointer">
                 Touchless</span ></h2>
@@ -80,7 +80,7 @@
     <section id="pants" class="section">
         <img src="./assets/klaudia-piaskowska-Zy6oNZRdcjc-unsplash.jpg" alt="bottoms Image" class="section_image">
 
-        <div class="absolute top-[60%] left-[75%] text-center text-5xl text-[#0f0f0f]">
+        <div class="absolute top-[60%] left-[75%] text-center text-[#0f0f0f]">
             <h1 class="">Jeans And More</h1>
             
         </div>

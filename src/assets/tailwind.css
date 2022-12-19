@@ -8,26 +8,27 @@ html {
     scroll-behavior: smooth;
     font-family: 'Sedgwick Ave Display', cursive;
     background-color: black;
+    font-size:large;
+    
     
 }
 
 .navbar {
     @apply flex items-center justify-between w-full fixed 
-    top-0 z-10 text-white py-2 h-[3.5rem] p-[1.2rem] ;
+    top-0 z-10 text-white py-2 h-[3.5rem] p-[1.2rem];
    
 }
 
 .navlink {
-    @apply text-2xl font-semibold text-[rgb(148,144,157)] mx-[0.8rem]
+    @apply font-semibold text-[rgb(148,144,157)] mx-[0.8rem]
     px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent
     hover:bg-[#ebebf1] hover:bg-opacity-10 transition-all duration-300;
 }
 
 .social {
-    @apply text-2xl font-semibold text-[#eceef3] mx-[0.4rem]
+    @apply font-semibold text-[#eceef3] mx-[0.4rem]
     px-[0.3rem] py-[0.1rem] rounded-[0.5rem] bg-transparent
-    hover:bg-[#f4f4f7] hover:bg-opacity-10 transition-all duration-300
-    ;
+    hover:bg-[#f4f4f7] hover:bg-opacity-10 transition-all duration-300;
 }
 
 .section {
@@ -39,7 +40,7 @@ html {
 }
 
 .details{
-    @apply absolute top-[20%] left-[5%] text-center text-5xl text-[#252427];
+    @apply absolute top-[20%] left-[5%] text-center text-[#252427];
 }
 
 .transform_50 {
