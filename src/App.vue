@@ -1,17 +1,17 @@
 <template>
-<header class="navbar  bg-[#070707]"  >
-<img src="./assets/0022347955_100 (1).svg" class="h-14 w-28 sm:w-36 md:w-44 lg:w-60  " >
-<div class="grid grid-cols-3 gap-3">
-    <a href="#sweats" class="navlink">Sweats</a>
-    <a href="#shirts" class="navlink">Shirts</a>
-    <a href="#pants" class="navlink">Bottoms</a>
-</div>
-<div>
-    <a href="#instagram" class="social"><font-awesome-icon class="fa-brands fa-instagram" /></a>
-    <a href="#facebook" class="social"><font-awesome-icon class="fa-brands fa-facebook"  /></a>
-    <a href="#twitter" class="social"><font-awesome-icon class="fa-brands fa-twitter" /></a>
-    <a href="#pinterest" class="social"><font-awesome-icon class="fa-brands fa-pinterest" /></a>
-</div>
+<header class="navbar">
+    <img src="./assets/0022347955_100 (1).svg" class="h-14 w-28 sm:w-36 md:w-44 lg:w-60  " >
+    <div class="flex flex-row gap-4">
+        <a href="#sweats" class="navlink">Sweats</a>
+        <a href="#shirts" class="navlink">Shirts</a>
+        <a href="#pants" class="navlink">Bottoms</a>
+    </div>
+    <div class="hidden sm:flex">
+        <a href="#instagram" class="social"><font-awesome-icon class="fa-brands fa-instagram" /></a>
+        <a href="#facebook" class="social"><font-awesome-icon class="fa-brands fa-facebook"  /></a>
+        <a href="#twitter" class="social"><font-awesome-icon class="fa-brands fa-twitter" /></a>
+        <a href="#pinterest" class="social"><font-awesome-icon class="fa-brands fa-pinterest" /></a>
+    </div>
 </header>
 
 

@@ -9,18 +9,20 @@ html {
     font-family: 'Sedgwick Ave Display', cursive;
     background-color: black;
     font-size:large;
-    
-    
+}
+
+header {
+    background-color: black;
 }
 
 .navbar {
-    @apply flex items-center justify-between w-full fixed 
+    @apply flex items-center flex-nowrap justify-between w-full fixed 
     top-0 z-10 text-white py-2 h-[3.5rem] p-[1.2rem];
    
 }
 
 .navlink {
-    @apply font-semibold text-[rgb(148,144,157)] mx-[0.8rem]
+    @apply flex flex-1 items-center font-semibold text-[rgb(148,144,157)] mx-[0.8rem]
     px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent
     hover:bg-[#ebebf1] hover:bg-opacity-10 transition-all duration-300;
 }
