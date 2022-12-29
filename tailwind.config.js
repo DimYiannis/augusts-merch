@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'header': "url('../assets/0022347955_100.png')",
+        'sweats' : "url('../assets/gen6.jpg')",
       }
     },
   },
