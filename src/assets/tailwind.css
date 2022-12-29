@@ -22,7 +22,7 @@ header {
 }
 
 .navbar {
-    @apply flex items-center flex-nowrap justify-between w-full fixed 
+    @apply flex items-center flex-nowrap justify-between w-full fixed
     top-0 z-10 text-white py-2 h-[1.5rem] tablet:h-[2rem] p-[1.2rem];
    
 }

@@ -1,21 +1,22 @@
 <template>
 <header class="navbar">
     <img src="./assets/0022347955_100 (1).svg" class="h-6 tablet:h-8 w-24 tablet:w-36 md:w-44 laptop:w-60  " >
-    <div class="flex flex-row gap-4">
+    
+    <div class="flex-auto">
+        August's
+    </div>
+
+    <div class=" flex flex-row gap-4 invisible tablet:visible">
         <a href="#sweats" class="navlink">Sweats</a>
         <a href="#shirts" class="navlink">Shirts</a>
         <a href="#pants" class="navlink">Bottoms</a>
     </div>
-    <div class="hidden tablet:flex">
-        <a href="#instagram" class="social"><font-awesome-icon class="fa-brands fa-instagram" /></a>
-        <a href="#facebook" class="social"><font-awesome-icon class="fa-brands fa-facebook"  /></a>
-        <a href="#twitter" class="social"><font-awesome-icon class="fa-brands fa-twitter" /></a>
-        <a href="#pinterest" class="social"><font-awesome-icon class="fa-brands fa-pinterest" /></a>
-    </div>
-
-    <ul>
+    
+    <ul class="visible tablet:invisible">
         <li>
-
+            <a href="#sweats" class="navlink">Sweats</a>
+            <a href="#shirts" class="navlink">Shirts</a>
+            <a href="#pants" class="navlink">Bottoms</a>
         </li>
     </ul>
 </header>
@@ -24,14 +25,6 @@
    <!--entry Section Start-->
    <section id="entry" class="section">
         <img src="./assets/nonchal2.jpg" class="section_img">
-
-        <div class="details">
-            <h1 class="p-2 ">The Finest At August's Place </h1>
-            <h2 class="p-2">Nonchalant Apparel</h2>
-            <h3 class="p-2">Urban Style</h3>
-            <h4 class="p-2">Street Clothes</h4>
-            
-        </div>
         
     <span class="underline cursor-pointer absolute top-[90%] left-[50%] ">
         Exclusive Apparel
@@ -74,7 +67,15 @@
     </section>
     <!--bottoms Section End-->
     <footer>
-
+        <div class="flex flex-row gap-4">
+        
+    </div>
+    <div class="hidden tablet:flex">
+        <a href="#instagram" class="social"><font-awesome-icon class="fa-brands fa-instagram" /></a>
+        <a href="#facebook" class="social"><font-awesome-icon class="fa-brands fa-facebook"  /></a>
+        <a href="#twitter" class="social"><font-awesome-icon class="fa-brands fa-twitter" /></a>
+        <a href="#pinterest" class="social"><font-awesome-icon class="fa-brands fa-pinterest" /></a>
+    </div>
     </footer>
 
   <!--<h2>Street Outwear and More</h2>
