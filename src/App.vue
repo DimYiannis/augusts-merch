@@ -12,7 +12,7 @@
         <a href="#pants" class="navlink">Bottoms</a>
     </div>
     
-    <div class="flex justify-center items-center h-screen bg-transparent">
+    <div class="flex tablet:invisible justify-center items-center h-screen bg-transparent">
         <div class="relative">
             <button
             @click="toggleVisibility"
