@@ -14,7 +14,7 @@ html {
     scroll-behavior: smooth;
     font-family:'Exo 2', sans-serif;
     background-color: black;
-    font-size:x-large;
+    /*font-size:x-large;*/
 }
 /*bg specified in root and applied here with the name i gave above*/
 header {
@@ -22,13 +22,13 @@ header {
 }
 
 .navbar {
-    @apply flex items-center flex-nowrap justify-between w-full fixed
+    @apply flex flex-row items-center flex-nowrap justify-between w-full fixed
     top-0 z-10 text-white py-2 h-[1.5rem] tablet:h-[2rem] p-[1.2rem];
    
 }
 
 .navlink {
-    @apply flex flex-1 items-center font-semibold text-[rgb(148,144,157)] mx-[0.8rem]
+    @apply flex flex-1 items-center font-semibold text-[rgb(148,144,157)] mx-[0.4rem] laptop:mx-[0.8rem]
     px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent
     hover:bg-[#ebebf1] hover:bg-opacity-10 transition-all duration-300;
 }
@@ -48,9 +48,13 @@ header {
 }
 
 .details{
-    @apply absolute top-[20%] left-[5%] text-center text-[#252427];
+    @apply text-xl underline cursor-pointer absolute top-[90%] left-[50%] text-center text-[#050505] hover:text-2xl animate-bounce ;
 }
 
 .transform_50 {
     transform: translate(-50%, -50%);
+}
+
+.dropdown {
+   @apply block px-4 py-2 text-sm capitalize text-slate-600 hover:bg-slate-400 hover:text-white
 }
