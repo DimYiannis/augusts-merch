@@ -11,7 +11,8 @@
         <a href="#shirts" class="navlink">Shirts</a>
         <a href="#pants" class="navlink">Bottoms</a>
     </div>
-    
+
+    <!--drop down menu-->
     <div class="flex tablet:invisible justify-center items-center h-screen bg-transparent">
         <div class="relative">
             <button
@@ -63,7 +64,7 @@
     <section id="sweats" class="section">
         <img src="./assets/gen6.jpg" alt="sweats Image" class="section_img">
     
-        <span class=" text-xl animate-bounce hover:text-2xl underline cursor-pointer absolute top-[90%] left-[50%] text-white ">
+        <span class="object-center text-xl animate-bounce hover:text-2xl underline cursor-pointer absolute top-[90%] left-[40%] laptop:left-[47%] text-white ">
         Sweats
         </span>
 
@@ -101,6 +102,9 @@
         <a href="#twitter" class="social"><font-awesome-icon class="fa-brands fa-twitter" /></a>
         <a href="#pinterest" class="social"><font-awesome-icon class="fa-brands fa-pinterest" /></a>
     </div>
+
+    <footerSection/>
+    
     </footer>
 
   <!--<h2>Street Outwear and More</h2>
@@ -135,13 +139,13 @@
 import ModsItem from './components/ModsItem.vue'
 import itemsAug from './components/itemsAug.vue'
 import FormSubm from './components/FormSubm.vue'
-
+import footerSection from './components/footerSection.vue'
 
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Practise',
-    components: { ModsItem, itemsAug, FormSubm,},
+    components: { ModsItem, itemsAug, FormSubm,footerSection,},
     data() {
         return {
             showItems: false,

@@ -48,7 +48,7 @@ header {
 }
 
 .details{
-    @apply text-xl underline cursor-pointer absolute top-[90%] left-[50%] text-center text-[#050505] hover:text-2xl animate-bounce ;
+    @apply text-xl underline cursor-pointer absolute top-[90%] left-[40%] laptop:left-[47%] text-center text-[#050505] hover:text-2xl animate-bounce ;
 }
 
 .transform_50 {
