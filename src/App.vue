@@ -1,6 +1,6 @@
 <template>
 <header class="navbar">
-    <img src="./assets/0022347955_100 (1).svg" class="h-6 tablet:h-8 w-24 tablet:w-36 md:w-44 laptop:w-60  " >
+    <img src="./assets/0022347955_100 (1).svg" class="h-9 tablet:h-12 w-24 tablet:w-36 md:w-44 laptop:w-60  " >
     
     <div class="flex-1 basis-1/2 text-2xl">
         August's
@@ -12,11 +12,11 @@
         <a href="#pants" class="navlink">Bottoms</a>
     </div>
 
-    <!--drop down menu-->
-    <div class="flex tablet:invisible justify-center items-center h-screen bg-transparent">
+     <!--drop down menu-->
+     <div class="flex tablet:invisible justify-center items-center h-screen bg-transparent">
         <div class="relative">
             <button
-            @click="toggleVisibility"
+            @click="toggleBar"
             class="relative z-10 block rounded-md bg-white p-3 focus:outline-none"
             >
             <svg xmlns="http://www.w3.org/2000/svg" 
@@ -35,9 +35,9 @@
                 <div class="absolute w-3 h-3 rounded-full
                 bg-slate-400 top-3 right-3 border border-white "></div>
             </button>
-            <div @click="toggleVisibility" class="fixed inset-0 h-full w-full z-10"></div>
+    
             <div 
-            v-if="isVisible" class="absolute w-48 mt-2 right-8 bg-white rounded-md shadow-xl z-20 text-black ">
+            v-if="showBar" class="absolute w-48 mt-2 right-8 bg-white rounded-md shadow-xl z-20 text-black ">
                 <a href="#sweats" class="dropdown">Sweats</a>
                 <a href="#shirts" class="dropdown">Shirts</a>
                 <a href="#pants" class="dropdown">Bottoms</a>
@@ -46,6 +46,7 @@
     </div>
    
 </header>
+
 
 
    <!--entry Section Start-->
@@ -92,20 +93,11 @@
     
     </section>
     <!--bottoms Section End-->
-    <footer>
-        <div class="flex flex-row gap-4">
-        
-    </div>
-    <div class="hidden tablet:flex">
-        <a href="#instagram" class="social"><font-awesome-icon class="fa-brands fa-instagram" /></a>
-        <a href="#facebook" class="social"><font-awesome-icon class="fa-brands fa-facebook"  /></a>
-        <a href="#twitter" class="social"><font-awesome-icon class="fa-brands fa-twitter" /></a>
-        <a href="#pinterest" class="social"><font-awesome-icon class="fa-brands fa-pinterest" /></a>
-    </div>
-
+    
+    <!--footer-->
     <footerSection/>
     
-    </footer>
+   
 
   <!--<h2>Street Outwear and More</h2>
   <img  src="./assets/street.jpg" />
@@ -142,6 +134,7 @@ import FormSubm from './components/FormSubm.vue'
 import footerSection from './components/footerSection.vue'
 
 
+
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Practise',
@@ -152,8 +145,8 @@ export default {
             showModels: false,
             bucket: 0,
             showBucket: false,
-            showForm: false,
-            isVisible: false,
+            showForm: false, 
+            showBar: false,      
         }
     },
     methods: {
@@ -166,10 +159,9 @@ export default {
         form() {
             this.showForm = !this.showForm
         },
-        toggleVisibility() {
-            this.isVisible = !this.isVisible;
+        toggleBar() {
+            this.showBar = !this.showBar;
         },
-       
     },
         watch: {
             bucket(newValue, oldValue) {

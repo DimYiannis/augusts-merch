@@ -1,5 +1,6 @@
 <template>
-    <div class="w-full bg-black text-gray-100">
+    <div class="w-full bg-black text-gray-100 tablet:bg-white tablet:text-black desktop:bg-black desktop:text-white">
+
         <div 
         class="
         container
@@ -28,6 +29,10 @@
         <p>2310 555555</p>
         </div>
 
+        <div class="">
+            
+        </div>
+
         <div 
         class="
         container
@@ -47,6 +52,10 @@
                 <div class="no-underline hover:underline">Privacy Policy</div>
                 <div class="no-underline hover:underline ml-4">Terms & Conditions</div>
                 <div class="no-underline hover:underline ml-4">Contact Us</div>
+                <a href="#instagram" class="social"><font-awesome-icon class="fa-brands fa-instagram" /></a>
+                <a href="#facebook" class="social"><font-awesome-icon class="fa-brands fa-facebook"  /></a>
+                <a href="#twitter" class="social"><font-awesome-icon class="fa-brands fa-twitter" /></a>
+                <a href="#pinterest" class="social"><font-awesome-icon class="fa-brands fa-pinterest" /></a>
             </div>
         </div>
     </div>

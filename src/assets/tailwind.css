@@ -23,7 +23,7 @@ header {
 
 .navbar {
     @apply flex flex-row items-center flex-nowrap justify-between w-full fixed
-    top-0 z-10 text-white py-2 h-[1.5rem] tablet:h-[2rem] p-[1.2rem];
+    top-0 z-10 text-white py-2 h-[2.5rem] tablet:h-[3rem] p-[1.2rem];
    
 }
 
@@ -34,7 +34,7 @@ header {
 }
 
 .social {
-    @apply laptop:text-lg desktop:text-2xl  font-semibold text-[#eceef3] mx-[0.4rem]
+    @apply laptop:text-lg desktop:text-2xl  font-semibold text-[#eceef3] tablet:text-black desktop:text-white mx-[0.4rem]
     px-[0.3rem] py-[0.1rem] rounded-[0.5rem] bg-transparent
     hover:bg-[#f4f4f7] hover:bg-opacity-10 transition-all duration-300;
 }
@@ -52,9 +52,18 @@ header {
 }
 
 .transform_50 {
-    transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
 }
 
 .dropdown {
    @apply block px-4 py-2 text-sm capitalize text-slate-600 hover:bg-slate-400 hover:text-white
+}
+
+/*.backdrop {
+    @apply fixed inset-0 h-full w-full z-10
+}*/
+
+.backdrop {
+   @apply top-0 fixed bg-transparent
+   w-full h-full
 }
