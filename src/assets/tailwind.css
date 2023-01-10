@@ -75,3 +75,22 @@ header {
     hover:bg-opacity-10 transition-all duration-300
     rounded-[0.4rem] px-2
 }
+
+.menubutton {
+    @apply relative z-10 rounded-md bg-black  
+    focus:outline-none 
+}
+
+.bar {
+    @apply absolute w-48 mt-2 right-8 bg-white rounded-md 
+    shadow-xl z-20 text-black
+}
+
+.modal {
+   @apply w-4/5 h-fit p-5 mt-12 mb-12 bg-slate-700
+   rounded-lg
+}
+
+.adjust {
+    @apply w-72 h-36
+}    

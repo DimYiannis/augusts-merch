@@ -17,27 +17,24 @@
         <div class="relative">
             <button
             @click="toggleBar"
-            class="relative z-10 block rounded-md bg-white p-3 focus:outline-none"
+            class="menubutton"
             >
             <svg xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke-width="1.5" 
             stroke="currentColor" 
-            class="w-6 h-6 text-black"
+            class="w-6 h-8 text-white"
             >
             <path stroke-linecap="round" 
             stroke-linejoin="round" 
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
             </svg>
-
-                <div class="absolute w-3 h-3 rounded-full
-                bg-slate-400 top-3 right-3 border border-white "></div>
             </button>
     
             <div 
-            v-if="showBar" class="absolute w-48 mt-2 right-8 bg-white rounded-md shadow-xl z-20 text-black ">
+            v-if="showBar" class="bar ">
                 <a href="#sweats" class="dropdown">Sweats</a>
                 <a href="#shirts" class="dropdown">Shirts</a>
                 <a href="#pants" class="dropdown">Bottoms</a>
@@ -47,16 +44,15 @@
    
 </header>
 
-
-
    <!--entry Section Start-->
    <section id="entry" class="section">
         <img src="./assets/nonchal2.jpg" class="section_img">
         
-    <span class="details">
-        Exclusive Apparel
-    </span>
-        
+        <span class="details" @click="merch">
+            Exclusive Apparel
+        </span>
+
+        <Apparel v-show="showApparel" @close="merch"/>
     
     </section>
     <!--entry Section End-->
@@ -97,81 +93,34 @@
     <!--footer-->
     <footerSection/>
     
-   
-
-  <!--<h2>Street Outwear and More</h2>
-  <img  src="./assets/street.jpg" />
-
-  <button @click="merch"
-   :class="showItems ? 'secondphase' : 'firstphase'">
-   Press For Merchantise</button>
-
- <itemsAug v-show="showItems" @close="merch"/>  
- 
- <button 
-  @click="modelz"
-  :class="showModels ? 'secondphase' : 'firstphase'">
-  Our Models:</button>
-
- <ModsItem v-show="showModels" @close="modelz"/> 
-
- <button @click="form" :class="showForm ? 'secondphase' : 'firstphase'">Submit your Information</button>
-
- <FormSubm v-show="showForm" @close="form" />
-
- <div>
-    <button :class="bucket" @click="bucket -= 1" >reduce from bucket</button>
-    <button :class="bucket" @click="bucket += 1">add to bucket</button>
-
-    <h2 v-show="bucket" style="font-size:large; color:teal; font-style:oblique">items in bucket {{bucket}}</h2>
-</div> -->
 </template>
 
 <script>
-import ModsItem from './components/ModsItem.vue'
-import itemsAug from './components/itemsAug.vue'
-import FormSubm from './components/FormSubm.vue'
+import Apparel from './components/Apparel.vue'
 import footerSection from './components/footerSection.vue'
 
 
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name: 'Practise',
-    components: { ModsItem, itemsAug, FormSubm,footerSection,},
+    name: 'App',
+    components: { Apparel,footerSection,},
     data() {
         return {
-            showItems: false,
-            showModels: false,
-            bucket: 0,
-            showBucket: false,
-            showForm: false, 
+            showApparel: false, 
             showBar: false,      
         }
     },
     methods: {
         merch() {
-            this.showItems = !this.showItems 
-        },
-        modelz() {
-            this.showModels = !this.showModels
-        },
-        form() {
-            this.showForm = !this.showForm
+            this.showApparel = !this.showApparel 
         },
         toggleBar() {
             this.showBar = !this.showBar;
         },
     },
-        watch: {
-            bucket(newValue, oldValue) {
-                if(newValue < oldValue && newValue === -1) {
-                    alert(
-                        'items cant be less than 0'
-                    )
-                }
-            },
-        }
+        
+        
 }
 </script>
 
