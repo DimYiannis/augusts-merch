@@ -1,5 +1,5 @@
 <template>
-    <transition :name="direction" mode="in-out">
+    <transition :name="direction" mode="ease-in-out">
         <div v-show="visibleSlide===index" class="CarouselSlide">
             <slot></slot>
         </div>

@@ -53,14 +53,7 @@ header {
    @apply block px-4 py-2 text-sm capitalize text-slate-600 hover:bg-slate-400 hover:text-white
 }
 
-/*.backdrop {
-    @apply fixed inset-0 h-full w-full z-10
-}*/
-
-.backdrop {
-   @apply top-0 fixed bg-transparent
-   w-full h-full
-}
+/*footer*/
 
 .social {
     @apply text-sm laptop:text-lg desktop:text-2xl  font-semibold
@@ -81,68 +74,76 @@ header {
     shadow-xl z-20 text-black
 }
 
-.modal {
-   @apply w-4/5 h-fit p-5 mt-12 mb-12 bg-slate-700 
-   rounded-lg
+/*.backdrop {
+    @apply fixed inset-0 h-full w-full z-10
+}*/
+
+.backdrop {
+   @apply top-0 fixed bg-transparent
+   w-full h-full 
 }
 
+.modal {
+   @apply w-3/5 h-screen p-5 mt-12 bg-transparent 
+   rounded-lg absolute left-[20%]
+}
 
 
 /*carousel*/
 
 .btn {
-    @apply absolute h-6 w-12 top-[130px] bg-black text-white
+    @apply absolute h-6 w-12 top-[170px] bg-black text-white
     border-none hover:outline-none hover:cursor-pointer 
     active:outline-none active:cursor-pointer 
 }
 
 .carousel {
-    @apply relative h-96 overflow-hidden 
+    @apply relative h-96 overflow-hidden max-w-[700px]
 }
 
+.adjust {
+    @apply h-96 w-[100px] desktop:w-[650px] rounded-2xl
+} 
 .carouselSlide {
     @apply absolute top-0 bottom-0 left-0 right-0 
 }
 
-.adjust {
-    @apply w-fit h-96
-} 
 /*transitions*/
 
 .left-enter-active {
-    animation: leftInAnimation 0.4s ease-in-out;
+    animation: leftInAnimation 0.5s ease-in;
 }
 
 .left-leave-active {
-    animation: leftOutAnimation 0.4s ease-in-out;
+    animation: leftOutAnimation 0.5s ease-in;
 }
 
 @keyframes leftInAnimation {
-    from { transform: translateX(100%);}
+    from { transform: translateX(-100%);}
     to { transform: translateX(0);}
 }
 
 @keyframes leftOutAnimation {
-    from { transform: translateX(0);}
-    to { transform: translateX(-100%);}
+    from { transform: translateX(0%);}
+    to { transform: translateX(100%);}
 }
 
 /*right*/
 
 .right-enter-active {
-    animation: rightInAnimation 0.4s ease-in-out;
+    animation: rightInAnimation 0.5s ease-in;
 }
 
 .right-leave-active {
-    animation: rightOutAnimation 0.4s ease-in-out;
+    animation: rightOutAnimation 0.5s ease-in;
 }
 
 @keyframes rightInAnimation {
-    from { transform: translateX(-100%);}
-    to { transform: translateX(0);}
+    from { transform: translateX(0%);}
+    to { transform: translateX(-100%);}
 }
 
 @keyframes rightOutAnimation {
-    from { transform: translateX(0);}
-    to { transform: translateX(+100%);}
+    from { transform: translateX(+100%);}
+    to { transform: translateX(0);}
 }    
