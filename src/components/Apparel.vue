@@ -1,7 +1,7 @@
 <template>
 <div class="backdrop" @click.self="closeApparel">
   <div class="modal"> 
-      <div class="flex justify-item-center">
+      <div class="grid justify-items-center">
         <Carousel
         @next="next"
         @prev="prev">
@@ -10,7 +10,7 @@
             :index="index"
             :visibleSlide = "visibleSlide"
             :direction ="direction">
-            <img :src="slide"  />
+            <img :src="slide" class="adjust" />
           </CarouselSlide>
         </Carousel>
       </div>      

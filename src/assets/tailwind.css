@@ -82,13 +82,11 @@ header {
 }
 
 .modal {
-   @apply w-4/5 h-fit p-5 mt-12 mb-12 bg-slate-700 self-center
+   @apply w-4/5 h-fit p-5 mt-12 mb-12 bg-slate-700 
    rounded-lg
 }
 
-.adjust {
-    @apply w-72 h-36
-} 
+
 
 /*carousel*/
 
@@ -99,13 +97,16 @@ header {
 }
 
 .carousel {
-    @apply relative h-1/2 overflow-hidden 
+    @apply relative h-96 overflow-hidden 
 }
 
 .carouselSlide {
     @apply absolute top-0 bottom-0 left-0 right-0 
 }
 
+.adjust {
+    @apply w-fit h-96
+} 
 /*transitions*/
 
 .left-enter-active {
