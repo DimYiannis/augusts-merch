@@ -76,21 +76,72 @@ header {
     rounded-[0.4rem] px-2
 }
 
-.menubutton {
-    @apply relative z-10 rounded-md bg-black  
-    focus:outline-none 
-}
-
 .bar {
     @apply absolute w-48 mt-2 right-8 bg-white rounded-md 
     shadow-xl z-20 text-black
 }
 
 .modal {
-   @apply w-4/5 h-fit p-5 mt-12 mb-12 bg-slate-700
+   @apply w-4/5 h-fit p-5 mt-12 mb-12 bg-slate-700 self-center
    rounded-lg
 }
 
 .adjust {
     @apply w-72 h-36
+} 
+
+/*carousel*/
+
+.btn {
+    @apply absolute h-6 w-12 top-[130px] bg-black text-white
+    border-none hover:outline-none hover:cursor-pointer 
+    active:outline-none active:cursor-pointer 
+}
+
+.carousel {
+    @apply relative h-1/2 overflow-hidden 
+}
+
+.carouselSlide {
+    @apply absolute top-0 bottom-0 left-0 right-0 
+}
+
+/*transitions*/
+
+.left-enter-active {
+    animation: leftInAnimation 0.4s ease-in-out;
+}
+
+.left-leave-active {
+    animation: leftOutAnimation 0.4s ease-in-out;
+}
+
+@keyframes leftInAnimation {
+    from { transform: translateX(100%);}
+    to { transform: translateX(0);}
+}
+
+@keyframes leftOutAnimation {
+    from { transform: translateX(0);}
+    to { transform: translateX(-100%);}
+}
+
+/*right*/
+
+.right-enter-active {
+    animation: rightInAnimation 0.4s ease-in-out;
+}
+
+.right-leave-active {
+    animation: rightOutAnimation 0.4s ease-in-out;
+}
+
+@keyframes rightInAnimation {
+    from { transform: translateX(-100%);}
+    to { transform: translateX(0);}
+}
+
+@keyframes rightOutAnimation {
+    from { transform: translateX(0);}
+    to { transform: translateX(+100%);}
 }    
