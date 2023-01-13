@@ -80,7 +80,7 @@ header {
 .footerlinks {
     @apply no-underline hover:bg-[#f4f4f7] 
     hover:bg-opacity-10 transition-all duration-300
-    rounded-[0.4rem] px-2
+    rounded-[0.4rem] px-2 hover:cursor-pointer
 }
 
 
@@ -98,11 +98,9 @@ header {
 
 .modal {
    @apply grid w-[250px] tablet:w-[700px] laptop:w-[800px] 
-   desktop:w-[1000px] h-[500px] tablet:h-[550px] p-1 mt-12 rounded-lg left-[12%] 
+   desktop:w-[1000px] h-screen p-1 mt-12 rounded-lg left-[12%] 
    bg-[#F4F9FF] justify-items-stretch relative
    justify-self-start grid-rows-2 tablet:gap-40 desktop:gap-80 
-   
-   
 }
 
 .buybar {

@@ -61,9 +61,14 @@
     <section id="sweats" class="section">
         <img src="./assets/gen6.jpg" alt="sweats Image" class="section_img">
     
-        <span class="object-center text-xl animate-bounce hover:text-2xl underline cursor-pointer absolute top-[90%] left-[40%] laptop:left-[47%] text-white ">
+        <span class="object-center text-xl animate-bounce 
+        hover:text-2xl underline cursor-pointer absolute 
+        top-[90%] left-[40%] laptop:left-[47%] text-white"
+        @click="sweats">
         Sweats
         </span>
+
+        <sweats v-show="showSweats" @close="sweats"/>
 
     </section>
     <!--sweats Section End-->
@@ -72,9 +77,11 @@
     <section id="shirts" class="section">
         <img src="./assets/gen1.jpg" alt="shirts Image" class=" section_img ">
 
-        <span class="details ">
+        <span class="details" @click="shirts">
             Shirts
         </span>
+
+        <shirts v-show="showShirts" @close="shirts"/>
 
     </section>
     <!--shirts Section End-->
@@ -83,10 +90,12 @@
     <section id="pants" class="section">
         <img src="./assets/klaudia-piaskowska-Zy6oNZRdcjc-unsplash.jpg" alt="bottoms Image" class="section_img">
 
-        <span class="details ">
+        <span class="details" @click="bottoms">
          Bottoms
         </span>
-    
+        
+    <bottoms v-show="showBottom" @close="bottoms" />
+
     </section>
     <!--bottoms Section End-->
     
@@ -97,6 +106,9 @@
 
 <script>
 import Apparel from './components/Apparel.vue'
+import sweats from './components/sweats.vue'
+import shirts from './components/shirts.vue'
+import bottoms from './components/bottoms.vue'
 import footerSection from './components/footerSection.vue'
 
 
@@ -104,16 +116,28 @@ import footerSection from './components/footerSection.vue'
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'App',
-    components: { Apparel,footerSection,},
+    components: { Apparel,footerSection,bottoms,sweats,shirts,},
     data() {
         return {
             showApparel: false, 
-            showBar: false,      
+            showBar: false, 
+            showSweats:false,     
+            showShirts:false,     
+            showBottom:false,     
         }
     },
     methods: {
         merch() {
             this.showApparel = !this.showApparel 
+        },
+        bottoms() {
+            this.showBottom = !this.showBottom 
+        },
+        shirts() {
+            this.showShirts = !this.showShirts 
+        },
+        sweats() {
+            this.showSweats = !this.showSweats 
         },
         toggleBar() {
             this.showBar = !this.showBar;
