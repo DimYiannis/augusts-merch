@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 export default {
     props: ['visibleSlide', 'index', 'direction'],
     data() {
@@ -15,4 +14,3 @@ export default {
     }
 }
 </script>
-

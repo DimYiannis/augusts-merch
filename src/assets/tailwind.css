@@ -21,6 +21,9 @@ header {
     background-color: var(--bg-header);
 }
 
+
+
+/*header*/
 .navbar {
     @apply flex flex-row items-center flex-nowrap justify-between w-full fixed
     top-0 z-10 text-white py-2 h-[2.5rem] tablet:h-[3rem] p-[1.2rem];
@@ -33,6 +36,18 @@ header {
     hover:bg-[#ebebf1] hover:bg-opacity-10 transition-all duration-300;
 }
 
+.dropdown {
+   @apply block px-4 py-2 text-sm capitalize text-slate-600 hover:bg-slate-400 hover:text-white
+}
+
+.bar {
+    @apply absolute w-48 mt-2 right-8 bg-white rounded-md 
+    shadow-xl z-20 text-black
+}
+
+
+
+/*sections*/
 .section {
     @apply w-full h-screen relative;
 }
@@ -49,9 +64,8 @@ header {
    transform: translate(-50%, -50%);
 }
 
-.dropdown {
-   @apply block px-4 py-2 text-sm capitalize text-slate-600 hover:bg-slate-400 hover:text-white
-}
+
+
 
 /*footer*/
 
@@ -69,40 +83,67 @@ header {
     rounded-[0.4rem] px-2
 }
 
-.bar {
-    @apply absolute w-48 mt-2 right-8 bg-white rounded-md 
-    shadow-xl z-20 text-black
-}
+
+
+/*modal*/
 
 /*.backdrop {
     @apply fixed inset-0 h-full w-full z-10
 }*/
 
 .backdrop {
-   @apply top-0 fixed bg-transparent
-   w-full h-full 
+   @apply top-0 fixed bg-gray-500 bg-opacity-50
+   w-full h-full overscroll-auto grid justify-items-stretch
 }
 
 .modal {
-   @apply w-3/5 h-screen p-5 mt-12 bg-transparent 
-   rounded-lg absolute left-[20%]
+   @apply grid w-[250px] tablet:w-[700px] laptop:w-[800px] 
+   desktop:w-[1000px] h-screen p-1 mt-12 rounded-lg left-[12%] 
+   bg-[#F4F9FF] justify-items-stretch overscroll-auto relative
+   justify-self-start grid-rows-2 tablet:gap-40
+   
 }
+
+.buybar {
+    @apply flex flex-row flex-wrap w-full h-24 justify-between
+}
+
+.btnmodal {
+    @apply border-2 rounded-lg border-solid border-gray-600
+    w-fit h-fit text-gray-600 flex justify-center p-2
+    hover:text-black hover:border-black text-[8px] tablet:text-xs 
+}
+
+.btnmodalsvg {
+    @apply w-4 h-4 hover:fill-red-600 mr-1
+  
+}
+
+.hmodal {
+    @apply border-2 rounded-lg border-solid border-gray-600
+    w-fit h-fit text-black flex justify-center p-2
+    text-[8px] tablet:text-xs 
+}
+
+
 
 
 /*carousel*/
 
 .btn {
-    @apply absolute h-6 w-12 top-[170px] bg-black text-white
-    border-none hover:outline-none hover:cursor-pointer 
+    @apply absolute h-6 w-12 top-[170px] bg-transparent text-white
+    hover:outline-none hover:cursor-pointer hover:text-2xl
     active:outline-none active:cursor-pointer 
 }
 
 .carousel {
-    @apply relative h-96 overflow-hidden max-w-[700px]
+    @apply relative h-[350px] tablet:h-[450px] overflow-hidden 
+    max-w-[900px] top-4 justify-self-center
 }
 
 .adjust {
-    @apply h-96 w-[100px] desktop:w-[650px] rounded-2xl
+    @apply h-[350px] tablet:h-[450px] w-[200px] tablet:w-[450px] laptop:w-[900px] 
+    rounded-2xl top-0
 } 
 .carouselSlide {
     @apply absolute top-0 bottom-0 left-0 right-0 
@@ -147,3 +188,4 @@ header {
     from { transform: translateX(+100%);}
     to { transform: translateX(0);}
 }    
+
