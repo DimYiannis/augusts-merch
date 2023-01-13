@@ -93,19 +93,21 @@ header {
 
 .backdrop {
    @apply top-0 fixed bg-gray-500 bg-opacity-50
-   w-full h-full overscroll-auto grid justify-items-stretch
+   w-full h-full grid justify-items-stretch 
 }
 
 .modal {
    @apply grid w-[250px] tablet:w-[700px] laptop:w-[800px] 
-   desktop:w-[1000px] h-screen p-1 mt-12 rounded-lg left-[12%] 
-   bg-[#F4F9FF] justify-items-stretch overscroll-auto relative
-   justify-self-start grid-rows-2 tablet:gap-40
+   desktop:w-[1000px] h-[500px] tablet:h-[550px] p-1 mt-12 rounded-lg left-[12%] 
+   bg-[#F4F9FF] justify-items-stretch relative
+   justify-self-start grid-rows-2 tablet:gap-40 desktop:gap-80 
+   
    
 }
 
 .buybar {
     @apply flex flex-row flex-wrap w-full h-24 justify-between
+    mt-28 desktop:mt-8
 }
 
 .btnmodal {
@@ -131,7 +133,7 @@ header {
 /*carousel*/
 
 .btn {
-    @apply absolute h-6 w-12 top-[170px] bg-transparent text-white
+    @apply absolute h-6 w-12 top-[160px] tablet:top-[190px] bg-transparent text-white
     hover:outline-none hover:cursor-pointer hover:text-2xl
     active:outline-none active:cursor-pointer 
 }
@@ -142,7 +144,7 @@ header {
 }
 
 .adjust {
-    @apply h-[350px] tablet:h-[450px] w-[200px] tablet:w-[450px] laptop:w-[900px] 
+    @apply h-[350px] tablet:h-[450px] w-[200px] tablet:w-[450px] laptop:w-[700px] desktop:w-[900px]
     rounded-2xl top-0
 } 
 .carouselSlide {
