@@ -97,15 +97,16 @@ header {
 }
 
 .modal {
-   @apply grid w-[250px] tablet:w-[700px] laptop:w-[800px] 
-   desktop:w-[1000px] h-screen p-1 mt-12 rounded-lg left-[12%] 
-   bg-[#F4F9FF] justify-items-stretch relative
-   justify-self-start grid-rows-2 tablet:gap-40 desktop:gap-80 
+   @apply w-screen laptop:w-[800px] desktop:w-[1000px] h-screen
+    p-1 mt-20 mb-20 rounded-lg laptop:left-[12%] 
+   bg-[#F4F9FF] justify-items-stretch relative grid
+    grid-cols-3 grid-rows-3 gap-y-36 gap-x-3
+    overflow-y-scroll
 }
 
 .buybar {
     @apply flex flex-row flex-wrap w-full h-24 justify-between
-    mt-28 desktop:mt-8
+    desktop:mt-8
 }
 
 .btnmodal {
@@ -124,68 +125,4 @@ header {
     w-fit h-fit text-black flex justify-center p-2
     text-[8px] tablet:text-xs 
 }
-
-
-
-
-/*carousel*/
-
-.btn {
-    @apply absolute h-6 w-12 top-[160px] tablet:top-[190px] bg-transparent text-white
-    hover:outline-none hover:cursor-pointer hover:text-2xl
-    active:outline-none active:cursor-pointer 
-}
-
-.carousel {
-    @apply relative h-[350px] tablet:h-[450px] overflow-hidden 
-    max-w-[900px] top-4 justify-self-center
-}
-
-.adjust {
-    @apply h-[350px] tablet:h-[450px] w-[200px] tablet:w-[450px] laptop:w-[700px] desktop:w-[900px]
-    rounded-2xl top-0
-} 
-.carouselSlide {
-    @apply absolute top-0 bottom-0 left-0 right-0 
-}
-
-/*transitions*/
-
-.left-enter-active {
-    animation: leftInAnimation 0.5s ease-in;
-}
-
-.left-leave-active {
-    animation: leftOutAnimation 0.5s ease-in;
-}
-
-@keyframes leftInAnimation {
-    from { transform: translateX(-100%);}
-    to { transform: translateX(0);}
-}
-
-@keyframes leftOutAnimation {
-    from { transform: translateX(0%);}
-    to { transform: translateX(100%);}
-}
-
-/*right*/
-
-.right-enter-active {
-    animation: rightInAnimation 0.5s ease-in;
-}
-
-.right-leave-active {
-    animation: rightOutAnimation 0.5s ease-in;
-}
-
-@keyframes rightInAnimation {
-    from { transform: translateX(0%);}
-    to { transform: translateX(-100%);}
-}
-
-@keyframes rightOutAnimation {
-    from { transform: translateX(+100%);}
-    to { transform: translateX(0);}
-}    
 

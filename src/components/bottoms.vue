@@ -1,17 +1,7 @@
 <template>
     <div class="backdrop" @click.self="closeBottoms">
       <div class="modal"> 
-        <Carousel
-          @next="next"
-          @prev="prev">
-          <CarouselSlide v-for="(slide,index) in slides" 
-            :key="slide" 
-            :index="index"
-            :visibleSlide = "visibleSlide"
-            :direction ="direction">
-            <img :src="slide" class="adjust" />
-          </CarouselSlide>
-        </Carousel> 
+        
         
         <div class="buybar">
           <div class="flex gap-3 p-3 ml-3 tablet:ml-3">
@@ -62,8 +52,7 @@
     </template>
     
     <script>
-    import Carousel from './Carousel.vue';
-    import CarouselSlide from './CarouselSlide.vue';
+    
       export default {
        name: 'bottoms',
         data() {
@@ -78,36 +67,12 @@
           }
         },
         components: {
-          Carousel,CarouselSlide,
-        },
-    //next prev function
-        computed: {
-          slidesLen() {
-            return this.slides.length;
-          }
+          
         },
         methods: {
         closeBottoms() {
           this.$emit('close')
         },
-    // next prev function    
-        next() {
-          if(this.visibleSlide >= this.slidesLen - 1) {
-            this.visibleSlide = 0;
-          }else {
-            this.visibleSlide++;
-          }
-          this.direction = "left"
-        },
-        prev() {
-          if(this.visibleSlide <= 0) {
-            this.visibleSlide = this.slidesLen - 1;
-          }else {
-            this.visibleSlide--;
-          }
-          this.direction = "right"
-        },
-            
       }
     }
     </script>

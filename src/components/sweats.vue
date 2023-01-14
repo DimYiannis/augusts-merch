@@ -1,17 +1,7 @@
 <template>
     <div class="backdrop" @click.self="closeSweats">
       <div class="modal"> 
-        <Carousel
-          @next="next"
-          @prev="prev">
-          <CarouselSlide v-for="(slide,index) in slides" 
-            :key="slide" 
-            :index="index"
-            :visibleSlide = "visibleSlide"
-            :direction ="direction">
-            <img :src="slide" class="adjust" />
-          </CarouselSlide>
-        </Carousel> 
+        > 
         
         <div class="buybar">
           <div class="flex gap-3 p-3 ml-3 tablet:ml-3">
@@ -62,8 +52,7 @@
     </template>
     
     <script>
-    import Carousel from './Carousel.vue';
-    import CarouselSlide from './CarouselSlide.vue';
+    
       export default {
        name: 'sweats',
         data() {
@@ -73,41 +62,17 @@
               'https://images.unsplash.com/photo-1507553532144-b9df5e38c8d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80',
               'https://images.unsplash.com/photo-1508853363419-a9263d752c59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
             ],
-            visibleSlide : 0,
-            direction : 'left',
+            
           }
         },
         components: {
-          Carousel,CarouselSlide,
+          
         },
-    //next prev function
-        computed: {
-          slidesLen() {
-            return this.slides.length;
-          }
-        },
+    
         methods: {
         closeSweats() {
           this.$emit('close')
         },
-    // next prev function    
-        next() {
-          if(this.visibleSlide >= this.slidesLen - 1) {
-            this.visibleSlide = 0;
-          }else {
-            this.visibleSlide++;
-          }
-          this.direction = "left"
-        },
-        prev() {
-          if(this.visibleSlide <= 0) {
-            this.visibleSlide = this.slidesLen - 1;
-          }else {
-            this.visibleSlide--;
-          }
-          this.direction = "right"
-        },
-            
       }
     }
     </script>
