@@ -37,14 +37,19 @@
           </svg>
           Add to basket
           </button>
-          <ul>
-            <li>
-                <div>small</div>
-                <div>medium</div>
-                <div>large</div>
-            </li>
-          </ul>
-
+          
+          <!--2 elements: the "size" and the options-->
+          <div class="grid gap-0">
+            <!--when u hover options are shown -->
+            <div @mouseenter="toggleSize" class="show">size</div>
+            <!--need to save the choice-->
+            <div v-if="showSize" @mouseleave="toggleSize" class="size"> 
+                <option value="Small" class="dropdown hover:rounded-t-md">S</option>
+                <option value="Medium" class="dropdown">M</option> 
+                <option value="Large" class="dropdown">L</option> 
+                <option value="XLarge" class="dropdown hover:rounded-b-md"> XL</option> 
+            </div>
+          </div>
           </div>
         </div>  
     </div>
@@ -52,7 +57,16 @@
 
 <script>
     export default {
+        data() {
+            return {
+            showSize: false,}
+        },
         
+        methods: {
+            toggleSize() {
+                this.showSize = !this.showSize
+            },
+        }
     }
 </script>
 

@@ -37,7 +37,8 @@ header {
 }
 
 .dropdown {
-   @apply block px-4 py-2 text-sm capitalize text-slate-600 hover:bg-slate-400 hover:text-white
+   @apply block px-4 py-2 text-sm capitalize text-slate-600 
+   hover:bg-slate-400 hover:text-white hover:cursor-pointer 
 }
 
 .bar {
@@ -106,12 +107,12 @@ header {
 
 .buybar {
     @apply flex flex-row flex-wrap w-full h-24 justify-between
-    desktop:mt-8
+    desktop:mt-20 
 }
 
 .btnmodal {
     @apply border-2 rounded-lg border-solid border-gray-600
-    w-fit h-fit text-gray-600 flex justify-center p-2
+    w-fit h-fit text-gray-600 flex justify-center p-1
     hover:text-black hover:border-black text-[8px] tablet:text-xs 
 }
 
@@ -120,9 +121,18 @@ header {
   
 }
 
-.hmodal {
+.size {
+    @apply absolute bg-white  
+    shadow-xl grid border-2 rounded-lg border-solid 
+    border-gray-600 w-fit h-fit text-gray-600 
+    hover:border-black text-[8px] 
+    tablet:text-xs
+}
+
+.show {
     @apply border-2 rounded-lg border-solid border-gray-600
-    w-fit h-fit text-black flex justify-center p-2
-    text-[8px] tablet:text-xs 
+    w-fit h-fit text-gray-600 flex justify-center p-1
+    hover:text-black hover:border-black text-[8px] 
+    tablet:text-xs hover:cursor-pointer 
 }
 

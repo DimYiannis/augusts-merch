@@ -140,7 +140,7 @@ export default {
             this.showSweats = !this.showSweats 
         },
         toggleBar() {
-            this.showBar = !this.showBar;
+            this.showBar = !this.showBar
         },
     },
         
