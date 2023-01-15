@@ -37,7 +37,7 @@ header {
 }
 
 .bar {
-    @apply absolute w-48 mt-2 right-8 bg-white rounded-md 
+    @apply absolute w-32 mt-2 right-3 bg-white rounded-md 
     shadow-xl z-20 text-black
 }
 
@@ -104,8 +104,8 @@ header {
 
 .modal {
    @apply w-screen laptop:w-[800px] desktop:w-[1000px] h-screen
-    p-1 mt-20 mb-20 rounded-lg laptop:left-[12%] 
-   bg-[#F4F9FF] relative 
+    p-1 mt-2 mb-20 rounded-lg laptop:left-[12%] 
+   bg-[#F4F9FF] relative z-20 pt-8
     overflow-y-scroll 
 }
 
@@ -149,6 +149,7 @@ header {
 }
 
 .imgmodal { /*imgs of items*/
-    @apply h-[200px] desktop:h-[280px]
+    @apply h-[200px] desktop:h-[280px] desktop:hover:rounded-md 
+    desktop:hover:shadow-xl
 }
 
