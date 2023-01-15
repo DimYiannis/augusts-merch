@@ -6,7 +6,7 @@
 
 /*wanted to just check how :root works*/
 :root {
-    --bg-header: rgb(0, 0, 0);
+    --bg-header: bg-transparent;
 } 
 
 html {
@@ -25,15 +25,10 @@ header {
 
 /*header*/
 .navbar {
-    @apply flex flex-row items-center flex-nowrap justify-between w-full fixed
-    top-0 z-10 text-white py-2 h-[2.5rem] tablet:h-[3rem] p-[1.2rem];
+    @apply flex flex-row items-center flex-nowrap 
+    justify-between w-full fixed top-0 z-10 text-white py-2 
+    h-[2.5rem] tablet:h-[3rem] p-[1.2rem];
    
-}
-
-.navlink {
-    @apply flex flex-1 items-center font-semibold text-[rgb(148,144,157)] mx-[0.4rem] laptop:mx-[0.8rem]
-    px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent
-    hover:bg-[#ebebf1] hover:bg-opacity-10 transition-all duration-300;
 }
 
 .dropdown {
@@ -44,6 +39,16 @@ header {
 .bar {
     @apply absolute w-48 mt-2 right-8 bg-white rounded-md 
     shadow-xl z-20 text-black
+}
+
+.headerbtn {
+    @apply flex justify-center w-10 hover:bg-white hover:bg-opacity-40 
+    rounded-md p-2
+    
+}
+
+.headersvg {
+    @apply object-center w-6 h-6 text-black
 }
 
 
@@ -100,28 +105,35 @@ header {
 .modal {
    @apply w-screen laptop:w-[800px] desktop:w-[1000px] h-screen
     p-1 mt-20 mb-20 rounded-lg laptop:left-[12%] 
-   bg-[#F4F9FF] justify-items-stretch relative grid
-    grid-cols-2 tablet:grid-cols-3 grid-rows-2 gap-y-5 gap-x-3
-    overflow-y-scroll grid-flow-row auto-cols-max
+   bg-[#F4F9FF] relative 
+    overflow-y-scroll 
 }
 
-.buybar {
+.items { /*div that contains the items*/
+    @apply grid
+    grid-cols-2 tablet:grid-cols-3 grid-rows-2 gap-y-5 gap-x-3
+    grid-flow-row auto-cols-max justify-items-stretch 
+}
+
+
+/*item*/
+.buybar { /*div that contains item's buttons and divs*/
     @apply flex flex-row flex-wrap w-full h-24 justify-between
     desktop:mt-20 
 }
 
-.btnmodal {
+.btnmodal { /*item's button*/
     @apply border-2 rounded-lg border-solid border-gray-600
     w-fit h-fit text-gray-600 flex justify-center p-1
     hover:text-black hover:border-black text-[8px] tablet:text-xs 
 }
 
-.btnmodalsvg {
+.btnmodalsvg { /*svg in item's button*/
     @apply w-4 h-4 hover:fill-red-600 mr-1
   
 }
 
-.size {
+.size { /*div that contains the size options*/
     @apply absolute bg-white  
     shadow-xl grid border-2 rounded-lg border-solid 
     border-gray-600 w-fit h-fit text-gray-600 
@@ -129,14 +141,14 @@ header {
     tablet:text-xs
 }
 
-.show {
+.show { /*div of size when u hover it shows size options*/
     @apply border-2 rounded-lg border-solid border-gray-600
     w-fit h-fit text-gray-600 flex justify-center p-1
     hover:text-black hover:border-black text-[8px] 
     tablet:text-xs hover:cursor-pointer 
 }
 
-.imgmodal {
+.imgmodal { /*imgs of items*/
     @apply h-[200px] desktop:h-[280px]
 }
 

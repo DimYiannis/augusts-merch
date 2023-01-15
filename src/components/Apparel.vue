@@ -1,9 +1,12 @@
 <template>
   <div class="backdrop" @click.self="closeApparel">
-    <div class="modal"> 
-      <item v-show="showItem"/>
-      <item v-show="showItem"/>
-      <item v-show="showItem"/>
+    <div class="modal">
+      <div class="items">
+        <item v-show="showItem"/>
+        <item v-show="showItem"/>
+        <item v-show="showItem"/>
+      </div> 
+      
      
     </div>
   </div>
