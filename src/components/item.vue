@@ -1,8 +1,11 @@
 <template>
     <div class="grid grid-rows-2 gap-36 h-64">
         
-        <img src="https://images.unsplash.com/photo-1507553532144-b9df5e38c8d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80"
-        class="imgitem">
+        <!--using slot i can add img in apparel and rendering 
+        it here so i can add an item right away when i add an
+        item in apparel-->
+        <slot></slot>
+    
         
         <div class="buybar">
           <div class="flex gap-1 p-1 ml-3">
