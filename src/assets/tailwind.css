@@ -42,7 +42,7 @@ header {
 }
 
 .headerbtn {
-    @apply flex justify-center w-10 hover:bg-white hover:bg-opacity-40 
+    @apply flex justify-center w-fit hover:bg-white hover:bg-opacity-40 
     rounded-md p-2  
 }
 
