@@ -54,8 +54,6 @@ header {
     @apply relative bg-transparent text-black
 }
 
-
-/*MyTooltip*/
 .tooltip {
       @apply flex relative bg-transparent text-black text-[14px] 
     font-bold object-center
@@ -115,9 +113,9 @@ header {
 
 .modal {
    @apply w-screen laptop:w-[800px] desktop:w-[1000px] h-screen
-    p-1 mt-2 mb-20 rounded-lg laptop:left-[12%] 
-   bg-[#F4F9FF] relative z-20 pt-8
-    overflow-y-scroll 
+    p-1 mt-2 mb-20 rounded-lg object-center
+   bg-[#F4F9FF] relative z-20 pt-3 place-self-center
+    overflow-y-scroll top-14 appearance-none 
 }
 
 .items { /*div that contains the items*/
@@ -125,6 +123,17 @@ header {
     grid-cols-2 tablet:grid-cols-3 grid-rows-2 gap-y-5 gap-x-3
     grid-flow-row auto-cols-max justify-items-stretch 
 }
+
+.exitbtn {
+    @apply flex w-fit rounded-3xl p-2 
+    hover:text-red-600 hover:bg-black hover:bg-opacity-5   
+}
+
+.positionexitbtn {
+    @apply w-screen laptop:w-[800px] desktop:w-[1000px] 
+    grid place-items-end absolute top-0 right-1
+}
+
 
 
 /*item*/
@@ -136,7 +145,8 @@ header {
 .btnmodal { /*item's button*/
     @apply border-2 rounded-lg border-solid border-gray-600
     w-fit h-fit text-gray-600 flex justify-center p-1
-    hover:text-black hover:border-black text-[8px] tablet:text-xs 
+    hover:text-black hover:border-black text-[8px] 
+    tablet:text-xs 
 }
 
 .btnmodalsvg { /*svg in item's button*/
@@ -159,7 +169,7 @@ header {
     tablet:text-xs hover:cursor-pointer 
 }
 
-.imgmodal { /*imgs of items*/
+.imgitem { /*imgs of items*/
     @apply h-[200px] desktop:h-[280px] desktop:hover:rounded-md 
     desktop:hover:shadow-xl
 }
