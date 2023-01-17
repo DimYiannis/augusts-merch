@@ -112,16 +112,17 @@ header {
 }
 
 .modal {
-   @apply w-screen laptop:w-[800px] desktop:w-[1000px] h-screen
+   @apply w-screen laptop:w-[850px] desktop:w-[1000px] h-screen
     p-1 mt-2 mb-20 rounded-lg object-center
    bg-[#F4F9FF] relative z-20 pt-3 place-self-center
-    overflow-y-scroll top-14 appearance-none 
+    overflow-y-scroll top-14 appearance-none overscroll-contain
 }
 
 .items { /*div that contains the items*/
-    @apply grid
-    grid-cols-2 tablet:grid-cols-3 grid-rows-2 gap-y-5 gap-x-3
-    grid-flow-row auto-cols-max justify-items-stretch 
+    @apply grid px-4
+    grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 grid-rows-2 gap-y-5 gap-x-3
+    grid-flow-row auto-cols-auto justify-items-stretch
+     
 }
 
 .exitbtn {
@@ -143,30 +144,29 @@ header {
 }
 
 .btnmodal { /*item's button*/
-    @apply border-2 rounded-lg border-solid border-gray-600
+    @apply  border-2 rounded-lg border-solid 
     w-fit h-fit text-gray-600 flex justify-center p-1
     hover:text-black hover:border-black text-[8px] 
-    tablet:text-xs 
+    text-xs  tablet:text-sm
 }
 
 .btnmodalsvg { /*svg in item's button*/
-    @apply w-4 h-4 hover:fill-red-600 mr-1
+    @apply w-4 h-4  tablet:w-5 tablet:h-5
   
 }
 
 .size { /*div that contains the size options*/
     @apply absolute bg-white  
     shadow-xl grid border-2 rounded-lg border-solid 
-    border-gray-600 w-fit h-fit text-gray-600 
-    hover:border-black text-[8px] 
-    tablet:text-xs
+    w-fit h-fit text-gray-600 
+    text-[8px] tablet:text-xs
 }
 
 .show { /*div of size when u hover it shows size options*/
-    @apply border-2 rounded-lg border-solid border-gray-600
+    @apply border-2 rounded-lg border-solid 
     w-fit h-fit text-gray-600 flex justify-center p-1
-    hover:text-black hover:border-black text-[8px] 
-    tablet:text-xs hover:cursor-pointer 
+    hover:border-black tablet:text-sm 
+    text-xs hover:cursor-pointer 
 }
 
 .imgitem { /*imgs of items*/

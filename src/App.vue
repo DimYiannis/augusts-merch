@@ -44,7 +44,7 @@
             class="headerbtn">
                 
             <!--conditional rendering in order to describe what 
-                the icon is like a tooltip short of speak-->
+                the icon is 'like a tooltip short of speak'-->
                 <h1 v-if="showBagtip" class="tooltip">Shopping Bag</h1>
                 <h1 v-else class="tooltip">
                     <svg xmlns="http://www.w3.org/2000/svg" 

@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     // customized breakpoints //
     screens: {
-      'mobile': '360px',
-      // => smallest mobile screen, not gonna be used, just for reference  
+      'mobile': '450px',
+        
       'tablet': '760px',
-      // => @media (min-width: 640px) { ... }
+      // => @media (min-width: 760px) { ... }
 
       'laptop': '1024px',
       // => @media (min-width: 1024px) { ... }
