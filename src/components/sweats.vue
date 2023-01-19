@@ -1,72 +1,75 @@
 <template>
     <div class="backdrop" @click.self="closeSweats">
       <div class="modal"> 
-        > 
-        
-        <div class="buybar">
-          <div class="flex gap-3 p-3 ml-3 tablet:ml-3">
-            <h1 class="hmodal">item.id</h1>
-            <h2 class="hmodal">item.price</h2>
-          </div>
-          
-          <div class="flex gap-3 p-3 ml-3 tablet:mr-3">
-            <!--heart icon-->
-            <button class="btnmodal"
-            >
+        <div class="positionexitbtn">
+      
+          <button @click="closeSweats" class="exitbtn">
             <svg xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24" 
-            stroke-width="1.5" 
-            stroke="currentColor" 
-            class="btnmodalsvg">
-    
+            stroke-width="1.5" stroke="currentColor" 
+            class="w-6 h-6 hover:fill-gray hover:w-8 
+            hover:h-8 place-self-center">
             <path stroke-linecap="round" 
             stroke-linejoin="round" 
-            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" 
-            />
+            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Add to favorites
-            </button>
-             <!--plus icon-->
-            <button class="btnmodal"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke-width="1.5" 
-            stroke="currentColor" 
-            class="btnmodalsvg">
-  
-            <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            d="M12 4.5v15m7.5-7.5h-15" />
-            </svg>
-            Add to basket
-            </button>
-  
-          </div>
+          </button>
+
         </div>
+
+        <div class="items">
+          <!--i use v-bind to treat 10 as a number-->
+          <item id="black-shirt"  item="black shirt" :price="10">
+            <img src="https://images.unsplash.com/photo-1565971987782-9fbc5f314329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1507553532144-b9df5e38c8d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1508853363419-a9263d752c59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1601155866707-30829d8384d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1542053254535-def95e944232?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            class="imgitem">
+          </item>
+
+        </div> 
         
       </div>
     </div>
     </template>
     
     <script>
-    
+    import item from './item.vue';
       export default {
        name: 'sweats',
         data() {
           return {
-            slides: [
-              'https://images.unsplash.com/photo-1611246051576-966bd38dd99f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-              'https://images.unsplash.com/photo-1507553532144-b9df5e38c8d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80',
-              'https://images.unsplash.com/photo-1508853363419-a9263d752c59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-            ],
-            
+            showItem: true,
           }
         },
         components: {
-          
+          item,
         },
     
         methods: {

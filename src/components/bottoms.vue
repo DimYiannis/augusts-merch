@@ -3,76 +3,76 @@
       <div class="modal"> 
         
         
-        <div class="buybar">
-          <div class="flex gap-3 p-3 ml-3 tablet:ml-3">
-            <h1 class="hmodal">item.id</h1>
-            <h2 class="hmodal">item.price</h2>
-          </div>
-          
-          <div class="flex gap-3 p-3 ml-3 tablet:mr-3">
-            <!--heart icon-->
-            <button class="btnmodal"
-            >
+        <div class="positionexitbtn">
+      
+          <button @click="closeBottoms" class="exitbtn">
             <svg xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24" 
-            stroke-width="1.5" 
-            stroke="currentColor" 
-            class="btnmodalsvg">
-    
+            stroke-width="1.5" stroke="currentColor" 
+            class="w-6 h-6 hover:fill-gray hover:w-8 
+            hover:h-8 place-self-center">
             <path stroke-linecap="round" 
             stroke-linejoin="round" 
-            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" 
-            />
-            </svg>
-            Add to favorites
-            </button>
-             <!--plus icon-->
-            <button class="btnmodal"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke-width="1.5" 
-            stroke="currentColor" 
-            class="btnmodalsvg">
-  
-            <path stroke-linecap="round" 
-            stroke-linejoin="round" 
-            d="M12 4.5v15m7.5-7.5h-15" />
-            </svg>
-            Add to basket
-            </button>
-  
-          </div>
+            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+           </svg>
+          </button>
+
         </div>
+
+        <div class="items">
+          <!--i use v-bind to treat 10 as a number-->
+          <item id="black-shirt"  item="black shirt" :price="10">
+           <img src="https://images.unsplash.com/photo-1636016954413-44070ee44f8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1599030337145-5bec28bee393?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1602479503323-4b7e5068a883?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=841&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            class="imgitem ">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1584864783592-f1d6d4fcd1d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            class="imgitem">
+          </item>
+          <item>
+            <img src="https://images.unsplash.com/photo-1623629225725-23a723fd5bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+            class="imgitem">
+          </item>
+  
+        </div> 
         
       </div>
     </div>
     </template>
     
     <script>
-    
-      export default {
-       name: 'bottoms',
-        data() {
-          return {
-            slides: [
-              'https://images.unsplash.com/photo-1636016954413-44070ee44f8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-              'https://images.unsplash.com/photo-1599030337145-5bec28bee393?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-              'https://images.unsplash.com/photo-1602479503323-4b7e5068a883?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=841&q=80',
-            ],
-            visibleSlide : 0,
-            direction : 'left',
-          }
-        },
-        components: {
-          
-        },
-        methods: {
-        closeBottoms() {
-          this.$emit('close')
-        },
+import item from './item.vue';    
+export default {
+  name: 'bottoms',
+    data() {
+      return {
+        showItem: true,
       }
-    }
-    </script>
+    },
+    components: {
+      item,    
+    },
+    methods: {
+    closeBottoms() {
+      this.$emit('close')
+    },
+  }
+}
+</script>

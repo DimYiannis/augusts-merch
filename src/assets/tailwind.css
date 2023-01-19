@@ -120,8 +120,9 @@ header {
 
 .items { /*div that contains the items*/
     @apply grid px-4
-    grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 grid-rows-2 gap-y-5 gap-x-3
-    grid-flow-row auto-cols-auto justify-items-stretch
+    grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 
+    grid-rows-2 gap-y-5 gap-x-3 auto-cols-min 
+    justify-items-stretch desktop:gap-y-16
      
 }
 
@@ -171,6 +172,7 @@ header {
 
 .imgitem { /*imgs of items*/
     @apply h-[200px] desktop:h-[280px] desktop:hover:rounded-md 
-    desktop:hover:shadow-xl
+    desktop:hover:shadow-xl object-cover desktop:w-[580px]
+    w-[500px]
 }
 

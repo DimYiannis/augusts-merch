@@ -9,8 +9,8 @@
         <div class="buybar">
             <div class="flex gap-1 p-1 ml-1">
                 
-                <h1 class="btnmodal">item</h1>
-                <h2 class="btnmodal"> price </h2>
+                <h1 class="btnmodal">{{item}}</h1>
+                <h2 class="btnmodal"> {{price}}$ </h2>
                 
                 <!--heart icon-->
                 <button class="btnmodal">
@@ -70,7 +70,11 @@
             return {
             showSize: false,}
         },
-        
+        //prop types
+        props: {
+            item: String,
+            price: Number,
+        },
         methods: {
             toggleSize() {
                 this.showSize = !this.showSize
