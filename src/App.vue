@@ -102,8 +102,13 @@
             Exclusive Apparel
         </span>
 
-        <Apparel v-show="showApparel" @close="merch"/>
-    
+        <!--using teleport so that the component is not
+        restricted in the section area-->
+        <!--look for modal at the index.html file-->
+        <Teleport to="#modal">
+            <Apparel v-show="showApparel" @close="merch"/>
+        </Teleport>
+
     </section>
     <!--entry Section End-->
 
@@ -118,7 +123,9 @@
         Sweats
         </span>
 
-        <sweats v-show="showSweats" @close="sweats"/>
+        <Teleport to="#modal">
+            <sweats v-show="showSweats" @close="sweats"/>
+        </Teleport>
 
     </section>
     <!--sweats Section End-->
@@ -131,7 +138,9 @@
             Shirts
         </span>
 
-        <shirts v-show="showShirts" @close="shirts"/>
+        <Teleport to="#modal">
+            <shirts v-show="showShirts" @close="shirts"/>
+        </Teleport>
 
     </section>
     <!--shirts Section End-->
@@ -144,7 +153,9 @@
          Bottoms
         </span>
         
-    <bottoms v-show="showBottom" @close="bottoms" />
+        <Teleport to="#modal">
+            <bottoms v-show="showBottom" @close="bottoms" />
+        </Teleport>
 
     </section>
     <!--bottoms Section End-->
@@ -176,7 +187,7 @@ export default {
             showShirts:false,     
             showBottom:false,
             showBagtip:false,
-            showFavtip:false     
+            showFavtip:false,     
         }
     },
     methods: {
