@@ -5,9 +5,6 @@
         August's
     </div>
 
-     
-    <div class="flex basis-1/3 justify-end justify-self-end 
-    items-end gap-1 h-10 bg-transparent">
         <!--favorites-->
         <button 
         @mouseenter="showFavtip=true"
@@ -41,11 +38,12 @@
         @mouseleave="showBagtip=false"
         class="shoppingbag" >
             <button  
-            class="headerbtn">
+            class="headerbtn"
+           @click="clicked">
                 
-            <!--conditional rendering in order to describe what 
+                <!--conditional rendering in order to describe what 
                 the icon is 'like a tooltip short of speak'-->
-                <h1 v-if="showBagtip" class="tooltip">Shopping Bag</h1>
+                <h1 v-if="showBagtip" class="tooltip" >Shopping Bag</h1>
                 <h1 v-else class="tooltip">
                     <svg xmlns="http://www.w3.org/2000/svg" 
                     fill="none" 
@@ -58,8 +56,8 @@
                     </svg>
                 </h1>  
             </button>
-
-        </div>    
+            
+        </div>           
             
         <!--drop down menu-->
         <div class="relative" @mouseover="showBar=true"
@@ -90,10 +88,12 @@
             </div>
         </div>
 
-    </div>
+<Teleport to="#modal">
+    <shoppingBag v-show="showShoppings" @close="clicked" />
+</Teleport>    
    
 </header>
-
+            
    <!--entry Section Start-->
    <section id="entry" class="section">
         <img src="./assets/nonchal2.jpg" class="section_img">
@@ -171,13 +171,13 @@ import sweats from './components/sweats.vue'
 import shirts from './components/shirts.vue'
 import bottoms from './components/bottoms.vue'
 import footerSection from './components/footerSection.vue'
-
+import shoppingBag from './components/shoppingBag.vue'
 
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'App',
-    components: { Apparel,footerSection,bottoms,sweats,shirts, 
+    components: { Apparel,footerSection,bottoms,sweats,shirts,shoppingBag, 
     },
     data() {
         return {
@@ -187,7 +187,9 @@ export default {
             showShirts:false,     
             showBottom:false,
             showBagtip:false,
-            showFavtip:false,     
+            showFavtip:false,
+            showShoppings:false,
+               
         }
     },
     methods: {
@@ -212,6 +214,10 @@ export default {
         togglefavtip() {
             this.showFavtip = !this.showFavtip
         },
+        clicked() {
+            console.log("clicked")
+            this.showShoppings=!this.showShoppings
+        }
         
     },
         

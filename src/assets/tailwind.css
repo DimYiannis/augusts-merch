@@ -38,7 +38,7 @@ header {
 }
 
 .bar {
-    @apply absolute w-32 mt-2 right-3 bg-white rounded-md 
+    @apply absolute w-32 mt-6 right-0 bg-white rounded-md 
     shadow-xl z-20 text-black
 }
 
@@ -177,5 +177,12 @@ header {
     @apply h-[200px] desktop:h-[280px] desktop:hover:rounded-md 
     desktop:hover:shadow-xl object-cover desktop:w-[580px]
     w-[500px]
+}
+
+
+/*shoppingbag component*/
+.shoppings {
+    @apply w-[200px] h-[300px] bg-white rounded-md relative
+    z-10 justify-self-end top-14 right-8
 }
 
