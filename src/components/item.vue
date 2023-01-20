@@ -43,21 +43,13 @@
                     </svg>
 
                 </button>
+ 
+                <div>
+                    <select v-model="chosenSize" @mouseenter="addActive" @mouseleave="removeActive" class="show">
+                        <option v-for="size in sizes" :value="size.id" class="dropdown">{{ size.title }}</option>
+                    </select>
+                 </div>
 
-                <!--2 elements: the "size" and the options-->
-                <div class="grid gap-0">
-            
-                    <!--when u hover options are shown -->
-                    <div @mouseenter="toggleSize" class="show">Size</div>
-    
-                    <!--need to save the choice-->
-                    <div v-if="showSize" @mouseleave="toggleSize" class="size"> 
-                    <option value="Small" class="dropdown hover:rounded-t-md">S</option>
-                    <option value="Medium" class="dropdown">M</option> 
-                    <option value="Large" class="dropdown">L</option> 
-                    <option value="XLarge" class="dropdown hover:rounded-b-md"> XL</option> 
-                    </div>
-                </div>
 
             </div>
         </div>  
@@ -68,7 +60,28 @@
     export default {
         data() {
             return {
-            showSize: false,}
+                showSize: false,
+                chosenSize: '',
+                sizes: [
+                    
+                    {
+                        id:'S',
+                        title: 'Small'
+                    },
+                    {
+                        id:'M',
+                        title: 'Medium'
+                    },
+                    {
+                        id:'L',
+                        title: 'Large'
+                    },
+                    {
+                        id:'XL',
+                        title: 'XLarge'
+                    }   
+                ],
+            }
         },
         //prop types
         props: {
@@ -79,6 +92,16 @@
             toggleSize() {
                 this.showSize = !this.showSize
             },
+            chooseSize() {
+                this.chosenSize = this.size.title
+            },
+            addActive(event) {
+                event.target.classList.add('active')
+            },
+            removeActive(event) {
+                event.target.classList.remove('active')
+            },
+            
         }
     }
 </script>

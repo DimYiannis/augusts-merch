@@ -115,7 +115,7 @@ header {
 }
 
 .modal {
-   @apply w-screen laptop:w-[850px] desktop:w-[1000px] h-screen
+   @apply w-screen laptop:w-[850px] desktop:w-[1050px] h-screen
     p-1 rounded-lg object-center z-10 mt-8
    bg-[#F4F9FF] relative pt-3 place-self-center
     overflow-y-scroll top-4 appearance-none overscroll-contain
@@ -170,7 +170,7 @@ header {
     @apply border-2 rounded-lg border-solid 
     w-fit h-fit text-gray-600 flex justify-center p-1
     hover:border-black tablet:text-sm 
-    text-xs hover:cursor-pointer 
+    text-xs hover:cursor-pointer overflow-hidden
 }
 
 .imgitem { /*imgs of items*/
