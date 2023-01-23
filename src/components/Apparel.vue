@@ -20,7 +20,8 @@
       </div>
 
       <div class="items">
-        <!--i use v-bind to treat 10 as a number-->
+        <!--i use v-bind to treat 10 as a number
+        from here i can add the item and its price-discription-->
         <item id="brown-boots"  item="brown boots" :price="60">
           <img src="https://images.unsplash.com/photo-1542838776-096d877b5aa2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           class="imgitem">

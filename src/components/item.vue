@@ -29,8 +29,9 @@
                     </svg>
                 </button>
 
-                    <!--plus icon-->
-                <button class="btnmodal">
+                    <!--shooping bag icon-->
+                <button class="btnmodal"
+                @click="addtoBag">
 
                     <svg xmlns="http://www.w3.org/2000/svg" 
                     fill="none" 
@@ -91,9 +92,6 @@
         methods: {
             toggleSize() {
                 this.showSize = !this.showSize
-            },
-            chooseSize() {
-                this.chosenSize = this.size.title
             },
             addActive(event) {
                 event.target.classList.add('active')
