@@ -20,35 +20,12 @@
         </div>
 
         <div class="items">
-         <!--i use v-bind to treat 10 as a number-->
-          <item id="black-shirt"  item="black shirt" :price="10">
-            <img src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+         
+         <item v-for="item in items" :key="item.id" :id="item.id" :item="item.name" :price="item.price">
+            <img :src="item.img"
             class="imgitem">
           </item>
-          <item>
-            <img src="https://images.unsplash.com/photo-1508160703418-fde5a61fdf38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-           class="imgitem">
-          </item>
-          <item>
-            <img src="https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-            class="imgitem">
-          </item>
-          <item>
-            <img src="https://images.unsplash.com/photo-1513188447171-ecf00455f051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80"
-            class="imgitem">
-          </item>
-          <item>
-            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-            class="imgitem">
-          </item>
-          <item>
-            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-            class="imgitem">
-          </item>
-          <item>
-            <img src="https://images.unsplash.com/photo-1519568470290-c0c1fbfff16f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=604&q=80"
-            class="imgitem">
-          </item>
+         
 
         </div> 
         
@@ -57,12 +34,56 @@
     </template>
     
     <script>
-import item from './item.vue';    
+import item from '../views/item.vue';    
 export default {
   name: 'shirts',
   data() {
     return {
       showItem: true,
+      items: [
+          {
+            id: 'black-shirt',
+            name: 'Black Shirt',
+            price: 10,
+            img: 'https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+          },
+          {
+            id: 'bracelet',
+            name: 'Wooden Bracelet',
+            price: 7,
+            img: 'https://images.unsplash.com/photo-1508160703418-fde5a61fdf38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+          },
+          {
+            id: 'Bronze Jacket',
+            name: 'Bronze Jacket',
+            price:60,
+            img: "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          },
+          {
+            id: 'red jacket',
+            name: 'Red Jacket',
+            price: 60,
+            img: 'https://images.unsplash.com/photo-1513188447171-ecf00455f051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80',
+          },
+          {
+            id: 'white cap',
+            name: 'White Cap',
+            price: 10,
+            img: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+          },
+          {
+            id: 'grey beanie',
+            name: 'Grey Beanie',
+            price: 10,
+            img: 'https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
+          },
+          {
+            id: 'black boots',
+            name: 'Black Boots',
+            price: 70,
+            img: "https://images.unsplash.com/photo-1519568470290-c0c1fbfff16f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=604&q=80",
+          },
+        ],
     }
   },
   components: {

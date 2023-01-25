@@ -31,7 +31,7 @@
 
                     <!--shooping bag icon-->
                 <button class="btnmodal"
-                @click="addtoBag">
+                @click="addToCart">
 
                     <svg xmlns="http://www.w3.org/2000/svg" 
                     fill="none" 
@@ -46,7 +46,7 @@
                 </button>
  
                 <div>
-                    <select v-model="chosenSize" @mouseenter="addActive" @mouseleave="removeActive" class="show">
+                    <select v-model="chosenSize" class="show">
                         <option v-for="size in sizes" :value="size.id" class="dropdown">{{ size.title }}</option>
                     </select>
                  </div>
@@ -63,8 +63,7 @@
             return {
                 showSize: false,
                 chosenSize: '',
-                sizes: [
-                    
+                sizes: [   
                     {
                         id:'S',
                         title: 'Small'
@@ -82,24 +81,45 @@
                         title: 'XLarge'
                     }   
                 ],
+                selectedItem: [
+                    {
+                    id : this.id,
+                    item:this.item,
+                    price: this.price,
+                    
+                    }
+                ]
+                
             }
         },
         //prop types
         props: {
             item: String,
             price: Number,
+            id: String,
+            img: String,
+
+
         },
         methods: {
             toggleSize() {
                 this.showSize = !this.showSize
             },
-            addActive(event) {
-                event.target.classList.add('active')
+            addToCart() {
+                console.log(this.id)
+                console.log(this.item)
+                console.log(this.price)
+                console.log(this.img)
+                console.log(this.chosenSize)
+                console.log(this.selectedItem)
             },
-            removeActive(event) {
-                event.target.classList.remove('active')
+           
+        },
+        watch: {
+            chosenSize(newValue) {
+                console.log(`Selected size: = ${newValue}` )
             },
-            
+           
         }
     }
 </script>

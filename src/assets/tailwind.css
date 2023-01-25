@@ -34,7 +34,8 @@ header {
 
 .dropdown {
    @apply block px-4 py-2 text-sm capitalize text-slate-600 
-   hover:bg-slate-400 hover:text-white hover:cursor-pointer 
+   hover:bg-slate-400 hover:text-white hover:cursor-pointer
+   
 }
 
 .bar {
@@ -170,7 +171,7 @@ header {
     @apply border-2 rounded-lg border-solid 
     w-fit h-fit text-gray-600 flex justify-center p-1
     hover:border-black tablet:text-sm 
-    text-xs hover:cursor-pointer overflow-hidden
+    text-xs hover:cursor-pointer overflow-hidden appearance-none 
 }
 
 .imgitem { /*imgs of items*/
@@ -182,7 +183,16 @@ header {
 
 /*shoppingbag component*/
 .shoppings {
-    @apply w-[200px] h-[300px] bg-white rounded-md relative
-    z-10 justify-self-end top-14 right-8
+    @apply w-[400px] h-[500px] bg-gray-100 rounded-md relative
+    z-10 justify-self-end top-14 right-8 grid p-4
 }
 
+.invbackdrop {
+    @apply top-0 fixed w-full h-full grid 
+    justify-items-stretch  bg-transparent
+}
+
+.imgshop {
+    @apply w-[200px] h-[200px] border-solid 
+    border-2 mt-3 rounded-lg relative hover:shadow-xl
+}
