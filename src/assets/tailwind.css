@@ -184,7 +184,7 @@ header {
 /*shoppingbag component*/
 .shoppings {
     @apply w-[400px] h-[500px] bg-gray-100 rounded-md relative
-    z-10 justify-self-end top-14 right-8 grid p-4
+    z-10 justify-self-end top-14 right-8 grid py-4 
 }
 
 .invbackdrop {
@@ -195,4 +195,9 @@ header {
 .imgshop {
     @apply w-[200px] h-[200px] border-solid 
     border-2 mt-3 rounded-lg relative hover:shadow-xl
+}
+.fav {
+    @apply w-[400px] h-[500px] bg-gray-100 rounded-md relative
+    z-10 justify-self-end top-14 right-8 grid pb-2 
+    overscroll-none
 }

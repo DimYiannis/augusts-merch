@@ -86,12 +86,14 @@
                     id : this.id,
                     item:this.item,
                     price: this.price,
-                    
+                
                     }
                 ]
                 
             }
         },
+
+        
         //prop types
         props: {
             item: String,
@@ -105,13 +107,14 @@
             toggleSize() {
                 this.showSize = !this.showSize
             },
+           
             addToCart() {
                 console.log(this.id)
                 console.log(this.item)
                 console.log(this.price)
                 console.log(this.img)
                 console.log(this.chosenSize)
-                console.log(this.selectedItem)
+               
             },
            
         },
@@ -120,7 +123,8 @@
                 console.log(`Selected size: = ${newValue}` )
             },
            
-        }
+        },
+
     }
 </script>
 

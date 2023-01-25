@@ -1,15 +1,17 @@
 <template>
-    <div class="invbackdrop" @click.self="closeShoppingbag">    
-        <div class="shoppings" >
-           
-            <!--the item-->
-            <div class="bg-white w-[370px] h-[400px] 
-            place-self-center self-start border-solid 
-            border-b-2 border-black overflow-auto overscroll-none">
-                
-                <div class="font-bold w-fit relative
-                top-0 left-[40%]">Products</div>
+    <div class="invbackdrop" @click.self="closeFav">    
+        <div class="fav" >
 
+            <div class="font-bold w-fit relative
+                top-0 left-[40%] border-solid border-b-2 
+                border-black">Products</div>
+
+            <!--the item-->
+            <div class="bg-white w-[370px] h-[470px] 
+            place-self-end self-start border-solid 
+            border-b-2 border-black overflow-auto">
+                
+               
 
                 <div v-for="product in products" key="product.id" 
                 class="flex gap-8">
@@ -26,34 +28,15 @@
                 </div>
             
             </div>
-
-            <!--the cost-->
-            <div class=" h-[70px] sticky flex items-center 
-            justify-between w-full px-4">
-                <h1 class=" font-bold">Total Cost: 80$</h1>
-                
-                <button @click="ordered"
-                class="border-2 rounded-lg border-solid 
-                w-fit h-fit flex p-1 hover:text-black 
-                text-gray-600 hover:border-black 
-                text-xs tablet:text-base font-bold mt-3">
-                Order</button>
-
-            </div>
-            
             
         </div>
     </div>
 </template>
 
 <script>
-import item from '../views/item.vue';
 export default {
-    
     data() {
         return {
-            
-
             products: [
                 {
                     id: 'Black t-shirt',
@@ -77,14 +60,12 @@ export default {
             ]
         }
     },
-    components: item,   
-       
     methods: {
-        closeShoppingbag() {
+        closeFav() {
             this.$emit('close')
         },
         
-    }
+    },
 }
 </script>
 
