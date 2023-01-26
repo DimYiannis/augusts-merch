@@ -66,7 +66,7 @@ header {
 
 /*sections*/
 .section {
-    @apply w-full h-screen relative 
+    @apply w-full h-screen relative scroll-smooth
 }
 
 .section_img {
@@ -183,8 +183,35 @@ header {
 
 /*shoppingbag component*/
 .shoppings {
-    @apply w-[400px] h-[500px] bg-gray-100 rounded-md relative
-    z-10 justify-self-end top-14 right-8 grid py-4 
+    @apply  w-[240px] h-[310px] tablet:w-[300px] 
+    tablet:h-[400px] desktop:w-[400px] 
+    desktop:h-[570px] bg-gray-100
+    bg-opacity-40 
+    rounded-md relative z-10 justify-self-end top-14 right-8 
+    grid py-4 appearance-none  overscroll-none
+}
+
+.chosenitems {
+    @apply bg-white h-[230px] tablet:w-[270px] 
+    tablet:h-[300px] 
+    desktop:w-[370px] desktop:h-[470px]
+    place-self-center self-start border-solid 
+    border-b-2 border-black overflow-auto
+}
+
+.fav {
+    @apply w-[240px] h-[280px] tablet:w-[300px] tablet:h-[350px] desktop:w-[400px] 
+    desktop:h-[500px] bg-gray-100 bg-opacity-40 rounded-md relative
+    z-10 justify-self-end top-14 right-8 grid pb-2 
+    overscroll-none appearance-none
+}
+
+.favitem {
+    @apply  bg-white h-[230px] tablet:w-[270px] 
+    tablet:h-[300px] 
+    desktop:w-[370px] desktop:h-[470px] 
+    place-self-end self-start border-solid 
+    border-b-2 border-black overflow-auto
 }
 
 .invbackdrop {
@@ -193,11 +220,34 @@ header {
 }
 
 .imgshop {
-    @apply w-[200px] h-[200px] border-solid 
+    @apply w-[100px] h-[100px] tablet:w-[100px] tablet:h-[100px] desktop:w-[200px] desktop:h-[200px] border-solid 
     border-2 mt-3 rounded-lg relative hover:shadow-xl
 }
-.fav {
-    @apply w-[400px] h-[500px] bg-gray-100 rounded-md relative
-    z-10 justify-self-end top-14 right-8 grid pb-2 
-    overscroll-none
+
+.carttitle {
+    @apply font-bold w-fit relative
+    top-1 left-[40%] border-solid border-b-2 
+    border-black text-xs tablet:text-base 
+    desktop:text-xl
 }
+
+.cartdetails {
+    @apply relative place-self-center text-xs 
+    tablet:text-sm desktop:text-lg
+}
+
+.costs {
+    @apply h-[70px] sticky flex items-center 
+    justify-between w-full px-4
+}
+
+.costbtn {
+    @apply border-2 rounded-lg border-solid 
+    w-fit h-fit flex p-1 text-black 
+    hover:border-black self-center
+    text-xs tablet:text-base font-bold 
+}
+
+
+
+

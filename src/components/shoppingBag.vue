@@ -3,12 +3,9 @@
         <div class="shoppings" >
            
             <!--the item-->
-            <div class="bg-white w-[370px] h-[400px] 
-            place-self-center self-start border-solid 
-            border-b-2 border-black overflow-auto overscroll-none">
+            <div class="chosenitems" >
                 
-                <div class="font-bold w-fit relative
-                top-0 left-[40%]">Products</div>
+                <div class="carttitle">Products</div>
 
 
                 <div v-for="product in products" key="product.id" 
@@ -17,7 +14,7 @@
                     <img :src="product.img" 
                     class="imgshop">
 
-                    <div class=" relative place-self-center">
+                    <div class=" cartdetails">
                         <h1 class="font-bold">{{product.id}}</h1>
                         <h2>{{ product.size }}</h2>
                         <h3>price: {{product.price}}$</h3>
@@ -28,15 +25,11 @@
             </div>
 
             <!--the cost-->
-            <div class=" h-[70px] sticky flex items-center 
-            justify-between w-full px-4">
+            <div class=" costs">
                 <h1 class=" font-bold">Total Cost: 80$</h1>
                 
                 <button @click="ordered"
-                class="border-2 rounded-lg border-solid 
-                w-fit h-fit flex p-1 hover:text-black 
-                text-gray-600 hover:border-black 
-                text-xs tablet:text-base font-bold mt-3">
+                class="costbtn">
                 Order</button>
 
             </div>

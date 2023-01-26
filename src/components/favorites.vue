@@ -2,14 +2,10 @@
     <div class="invbackdrop" @click.self="closeFav">    
         <div class="fav" >
 
-            <div class="font-bold w-fit relative
-                top-0 left-[40%] border-solid border-b-2 
-                border-black">Products</div>
+            <div class="carttitle">Products</div>
 
             <!--the item-->
-            <div class="bg-white w-[370px] h-[470px] 
-            place-self-end self-start border-solid 
-            border-b-2 border-black overflow-auto">
+            <div class="favitem">
                 
                
 
@@ -19,8 +15,8 @@
                     <img :src="product.img" 
                     class="imgshop">
 
-                    <div class=" relative place-self-center">
-                        <h1 class="font-bold">{{product.id}}</h1>
+                    <div class=" cartdetails">
+                        <h1 class="font-bold">{{ product.id}}</h1>
                         <h2>{{ product.size }}</h2>
                         <h3>price: {{product.price}}$</h3>
                     </div>
