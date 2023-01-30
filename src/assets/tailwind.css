@@ -201,7 +201,7 @@ header {
 
 .fav {
     @apply w-[240px] h-[280px] tablet:w-[300px] tablet:h-[350px] desktop:w-[400px] 
-    desktop:h-[500px] bg-gray-100 bg-opacity-40 rounded-md relative
+    desktop:h-[520px] bg-gray-100 bg-opacity-40 rounded-md relative
     z-10 justify-self-end top-14 right-8 grid pb-2 
     overscroll-none appearance-none
 }
