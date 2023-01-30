@@ -9,7 +9,7 @@
         <div class="buybar">
             <div class="flex gap-1 p-1 ml-1">
                 
-                <h1 class="btnmodal">{{item}}</h1>
+                <h1 class="btnmodal">{{shoe}}</h1>
                 <h2 class="btnmodal"> {{price}}$ </h2>
                 
                 <!--heart icon-->
@@ -65,20 +65,20 @@
                 chosenSize: '',
                 sizes: [   
                     {
-                        id:'S',
-                        title: 'Small'
+                        id:'1',
+                        title: '42'
                     },
                     {
-                        id:'M',
-                        title: 'Medium'
+                        id:'2',
+                        title: '43'
                     },
                     {
-                        id:'L',
-                        title: 'Large'
+                        id:'3',
+                        title: '44'
                     },
                     {
-                        id:'XL',
-                        title: 'XLarge'
+                        id:'4',
+                        title: '45'
                     },   
                 ],
                 selectedItem: [
@@ -96,7 +96,7 @@
         
         //prop types
         props: {
-            item: String,
+            shoe: String,
             price: Number,
             id: String,
             img: String,
@@ -107,22 +107,6 @@
             toggleSize() {
                 this.showSize = !this.showSize
             },
-           
-            addToCart() {
-                console.log(this.id)
-                console.log(this.item)
-                console.log(this.price)
-                console.log(this.img)
-                console.log(this.chosenSize)
-               
-            },
-           
-        },
-        watch: {
-            chosenSize(newValue) {
-                console.log(`Selected size: = ${newValue}` )
-            },
-           
         },
 
     }

@@ -9,7 +9,7 @@
         <div class="buybar">
             <div class="flex gap-1 p-1 ml-1">
                 
-                <h1 class="btnmodal">{{item}}</h1>
+                <h1 class="btnmodal">{{accessory}}</h1>
                 <h2 class="btnmodal"> {{price}}$ </h2>
                 
                 <!--heart icon-->
@@ -44,12 +44,6 @@
                     </svg>
 
                 </button>
- 
-                <div>
-                    <select v-model="chosenSize" class="show">
-                        <option v-for="size in sizes" :value="size.id" class="dropdown">{{ size.title }}</option>
-                    </select>
-                 </div>
 
 
             </div>
@@ -62,33 +56,7 @@
         data() {
             return {
                 showSize: false,
-                chosenSize: '',
-                sizes: [   
-                    {
-                        id:'S',
-                        title: 'Small'
-                    },
-                    {
-                        id:'M',
-                        title: 'Medium'
-                    },
-                    {
-                        id:'L',
-                        title: 'Large'
-                    },
-                    {
-                        id:'XL',
-                        title: 'XLarge'
-                    },   
-                ],
-                selectedItem: [
-                    {
-                    id : this.id,
-                    item:this.item,
-                    price: this.price,
-                
-                    }
-                ]
+               
                 
             }
         },
@@ -96,10 +64,10 @@
         
         //prop types
         props: {
-            item: String,
             price: Number,
             id: String,
             img: String,
+            accessory: String,
 
 
         },
@@ -107,24 +75,7 @@
             toggleSize() {
                 this.showSize = !this.showSize
             },
-           
-            addToCart() {
-                console.log(this.id)
-                console.log(this.item)
-                console.log(this.price)
-                console.log(this.img)
-                console.log(this.chosenSize)
-               
-            },
-           
-        },
-        watch: {
-            chosenSize(newValue) {
-                console.log(`Selected size: = ${newValue}` )
-            },
-           
-        },
-
+        }    
     }
 </script>
 

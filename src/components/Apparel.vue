@@ -26,6 +26,16 @@
           <img :src="item.img"
           class="imgitem">
         </item>
+
+        <accessories v-for="accessory in accessories" :key="accessory.id" :id="accessory.id" :accessory="accessory.name" :price="accessory.price">
+          <img :src="accessory.img"
+          class="imgitem">
+        </accessories>
+
+        <shoes v-for="shoe in shoes" :key="shoe.id" :id="shoe.id" :shoe="shoe.name" :price="shoe.price">
+          <img :src="shoe.img"
+          class="imgitem">
+        </shoes>
         
       </div> 
       
@@ -36,6 +46,8 @@
   
 <script>
 import item from '../views/item.vue';
+import accessories from '../views/accessories.vue'
+import shoes from '../views/shoes.vue';
   export default {
    name: 'Apparel',
     data() {
@@ -43,18 +55,7 @@ import item from '../views/item.vue';
         cost: '',
         showItem: true,
         items: [
-          {
-            id: 'brown-boots',
-            name: 'Brown Boots',
-            price: 60,
-            img: 'https://images.unsplash.com/photo-1542838776-096d877b5aa2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-          },
-          {
-            id: 'bracelet',
-            name: 'Wooden Bracelet',
-            price: 7,
-            img: 'https://images.unsplash.com/photo-1632670549453-7a3dfac254a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-          },
+          
           {
             id: 'Bronze Jacket',
             name: 'Bronze Jacket',
@@ -67,6 +68,9 @@ import item from '../views/item.vue';
             price: 60,
             img: 'https://images.unsplash.com/photo-1608113562252-b320e7628e17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
           },
+          
+        ],
+        accessories: [
           {
             id: 'white cap',
             name: 'White Cap',
@@ -78,6 +82,20 @@ import item from '../views/item.vue';
             name: 'Grey Beanie',
             price: 10,
             img: 'https://images.unsplash.com/photo-1618354691792-d1d42acfd860?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80',
+          }, 
+          {
+            id: 'bracelet',
+            name: 'Wooden Bracelet',
+            price: 7,
+            img: 'https://images.unsplash.com/photo-1632670549453-7a3dfac254a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+          },
+        ],
+        shoes: [
+          {
+            id: 'brown-boots',
+            name: 'Brown Boots',
+            price: 60,
+            img: 'https://images.unsplash.com/photo-1542838776-096d877b5aa2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
           },
           {
             id: 'black boots',
@@ -90,7 +108,7 @@ import item from '../views/item.vue';
       
     },
   components: { 
-    item,     
+    item,accessories,shoes,     
   },
   methods: {
     closeApparel() {
