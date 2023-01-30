@@ -1,6 +1,15 @@
 # august's merch
 
-This template should help get you started developing with Vue 3 in Vite.
+Non reactive site for clothes
+
+![image](https://user-images.githubusercontent.com/107484245/215535636-1e9fec19-a1fc-4a5e-967e-0fe619a3a898.png)
+
+![image](https://user-images.githubusercontent.com/107484245/215537610-e1d2c927-a646-4178-a3a2-d12fd8d042e0.png)
+
+![image](https://user-images.githubusercontent.com/107484245/215537958-d795ccc5-ef97-4f8c-a224-5d304ddb9ec9.png)
+
+![image](https://user-images.githubusercontent.com/107484245/215538551-6e351c14-0e0a-47e6-8799-3fa82c58ba24.png)
+
 
 ## Recommended IDE Setup
 
