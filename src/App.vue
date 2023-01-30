@@ -10,7 +10,7 @@
         @mouseenter="showFavtip=true"
         @mouseleave="showFavtip=false"
         class="headerbtn"
-        @click="togglefav">
+        @click="activeTab='favorites'">
 
             <h1 v-if="showFavtip"
             class="tooltip">Favorites</h1>
@@ -40,7 +40,7 @@
         class="shoppingbag" >
             <button  
             class="headerbtn"
-           @click="clicked">
+           @click="activeTab='shoppingBag'">
                 
                 <!--conditional rendering in order to describe what 
                 the icon is 'like a tooltip short of speak'-->
@@ -95,13 +95,13 @@
             </div>
         </div>
 
+<!--dyn component so that only one tab is shown each time
+plus less code-->        
 <Teleport to="#modal">
-    <shoppingBag v-show="showShoppings" @close="clicked" />
+    <component :is="activeTab"   @close="closeTab" />
 </Teleport>   
 
-<Teleport to="#modal">
-    <favorites v-show="showFav" @close="togglefav" />
-</Teleport> 
+ 
    
 </header>
             
@@ -203,6 +203,7 @@ export default {
             showFavtip:false,
             showShoppings:false,
             showFav:false,
+            activeTab: '',
                
         }
     },
@@ -228,12 +229,10 @@ export default {
         togglefavtip() {
             this.showFavtip = !this.showFavtip
         },
-        clicked() {
-            this.showShoppings=!this.showShoppings
+        closeTab() {
+            this.activeTab=''
         },
-        togglefav() {
-            this.showFav = !this.showFav
-        },
+    
         
     },
         
