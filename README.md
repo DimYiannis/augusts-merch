@@ -42,3 +42,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Deploy Project
+ https://dimyiannis.github.io/augusts-merch/
