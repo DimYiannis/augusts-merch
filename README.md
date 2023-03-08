@@ -1,4 +1,4 @@
-# august's merch
+# August's merch
 
 Non reactive site for clothes
 
