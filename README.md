@@ -2,6 +2,10 @@
 
 Non reactive site for clothes
 
+## Deploy Project
+ https://dimyiannis.github.io/augusts-merch/
+
+
 ![image](https://user-images.githubusercontent.com/107484245/215535636-1e9fec19-a1fc-4a5e-967e-0fe619a3a898.png)
 
 ![image](https://user-images.githubusercontent.com/107484245/215537610-e1d2c927-a646-4178-a3a2-d12fd8d042e0.png)
@@ -43,5 +47,3 @@ npm run dev
 npm run build
 ```
 
-## Deploy Project
- https://dimyiannis.github.io/augusts-merch/
