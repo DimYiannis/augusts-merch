@@ -21,11 +21,11 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
-###Clone the repo
+### Clone the repo
 ```sh
 git clone https://github.com/DimYiannis/augusts-merch.git
 ```
-###Install NPM packages
+### Install NPM packages
 ```sh
 npm install
 ```
