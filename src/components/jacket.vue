@@ -63,23 +63,23 @@ export default {
     chosenSize: '',
     sizes: [   
         {
-          id:'XS',
+          id:'XSmall',
         },
         {
-          id:'SM',
+          id:'Small',
         },
         {
-          id:'MD',
+          id:'Medium',
         },
         {
-          id:'LG',           
+          id:'Large',           
         },
         {
-          id:'XL',
+          id:'XLarge',
                         
         }, 
         {
-          id:'2XL',                        
+          id:'2XLarge',                        
         },    
       ],
     }
