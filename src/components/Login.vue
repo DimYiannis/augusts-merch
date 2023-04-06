@@ -6,7 +6,7 @@
         place-self-center w-screen h-screen">
 
             <div class="flex justify-end p-3 h-10 ">
-                    <button class="exitbtn" @click="closeLogin">
+                    <button class="flex w-fit rounded-3xl p-2" @click="closeLogin">
                         <svg xmlns="http://www.w3.org/2000/svg" 
                         fill="white" 
                         viewBox="0 0 24 24" 
