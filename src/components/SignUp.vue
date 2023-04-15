@@ -1,8 +1,8 @@
 <template>
     <div class="invbackdrop" @click.self="closeSignup">
 
-        <div class="place-self-center flex flex-col mx-5
-        tablet:flex-row  mt-5 w-fit laptop:w-[900px] h-screen 
+        <div class="place-self-center flex flex-col tablet:mx-5
+        tablet:flex-row  tablet:mt-5 tablet:w-fit laptop:w-[900px] h-screen w-screen
         tablet:h-fit bg-white rounded-md overflow-y-scroll 
         tablet:overflow-y-hidden overscroll-none border-2 
         border-[#363636]" >
