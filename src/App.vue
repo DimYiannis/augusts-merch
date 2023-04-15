@@ -121,9 +121,9 @@
         <div class="relative" @mouseleave="toggleBar" >
             <div v-if="showBar"  @click="toggleBar" class="bar ">
                 <a href="/" class="dropdown">Home</a>
-                <a href="#sweats" class="dropdown">Sweats</a>
-                <a href="#shirts" class="dropdown">Shirts</a>
-                <a href="#pants" class="dropdown">Bottoms</a>
+                <a href="/#sweats" class="dropdown">Sweats</a>
+                <a href="/#shirts" class="dropdown">Shirts</a>
+                <a href="/#pants" class="dropdown">Bottoms</a>
             </div>
         </div>
 
