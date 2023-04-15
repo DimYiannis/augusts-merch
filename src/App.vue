@@ -120,10 +120,10 @@
         </div>
         <div class="relative" @mouseleave="toggleBar" >
             <div v-if="showBar"  @click="toggleBar" class="bar ">
-                <a href="/" class="dropdown">Home</a>
-                <a href="/#sweats" class="dropdown">Sweats</a>
-                <a href="/#shirts" class="dropdown">Shirts</a>
-                <a href="/#pants" class="dropdown">Bottoms</a>
+                <router-link to="/" class="dropdown">Home</router-link>
+                <router-link to="/sweats" class="dropdown">Sweats</router-link>
+                <router-link to="/shirts" class="dropdown">Shirts</router-link>
+                <router-link to="/bottoms" class="dropdown">Bottoms</router-link>
             </div>
         </div>
 
