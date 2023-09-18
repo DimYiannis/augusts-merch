@@ -106,6 +106,7 @@ export default {
   },
   computed: {
     totalItems() {
+      console.log(this.cartItems)
       return this.cartItems.reduce((acc, item) => acc + item.quantity, 0);
       
     },
